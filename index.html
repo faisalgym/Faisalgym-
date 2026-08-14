@@ -3,32 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Faisal's Gym - Fitness & Bodybuilding Center</title>  
+  <title>Faisal's Gym - Fitness & Bodybuilding Center</title>
   
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700;800&family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <style>
-    /* --- SLEEK ATHLETIC MODERN THEME --- */
+    /* --- GEOMETRIC PERFORMANCE RED & DARK THEME --- */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
     }
-
+    
     body {
-      background-color: #0b0c0e;
-      color: #f4f4f6;
+      background-color: #0a0a0c;
+      color: #ffffff;
       padding-bottom: 90px;
-      line-height: 1.6;
+      line-height: 1.5;
       background-image: 
-        radial-gradient(circle at 15% 15%, rgba(255, 30, 30, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 85% 65%, rgba(30, 144, 255, 0.08) 0%, transparent 40%),
-        linear-gradient(rgba(11, 12, 14, 0.92), rgba(11, 12, 14, 0.96)),
+        radial-gradient(circle at 90% 10%, rgba(255, 0, 60, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 10% 80%, rgba(255, 0, 60, 0.08) 0%, transparent 40%),
+        linear-gradient(rgba(10, 10, 12, 0.94), rgba(10, 10, 12, 0.98)),
         url('https://i.postimg.cc/J7NBtBYK/1785953392555.png');
       background-attachment: fixed;
       background-size: cover;
@@ -38,205 +38,205 @@
     .container {
       max-width: 480px;
       margin: 0 auto;
-      padding: 0 16px;
+      padding: 0 14px;
     }
 
-    /* --- HEADER (Glass Layout) --- */
+    /* --- HEADER (Sharp Slanted Style) --- */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 18px;
-      background: rgba(15, 16, 20, 0.85);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 16px;
+      background: rgba(14, 15, 18, 0.95);
+      border-bottom: 3px solid #ff003c;
       position: sticky;
       top: 0;
       z-index: 100;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(12px);
     }
 
     .logo-container {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     .header-logo {
-      height: 40px;
+      height: 38px;
       width: auto;
-      border-radius: 8px;
+      border-radius: 2px;
+      border: 1px solid #ff003c;
       object-fit: contain;
-      border: 1px solid rgba(255, 30, 30, 0.4);
-      box-shadow: 0 0 10px rgba(255, 30, 30, 0.2);
     }
 
     .logo-text {
-      font-size: 18px;
-      font-weight: 800;
-      letter-spacing: 0.8px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
       color: #ffffff;
       text-transform: uppercase;
     }
 
-    .logo-text span { 
-      color: #1e90ff; 
+    .logo-text span {
+      color: #ff003c;
     }
 
     .join-btn {
-      background: linear-gradient(135deg, #ff2a2a, #d00000);
-      color: white;
+      background: #ff003c;
+      color: #ffffff;
       padding: 8px 16px;
-      border-radius: 50px;
+      border-radius: 0px;
+      clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
       text-decoration: none;
-      font-weight: 700;
-      font-size: 12px;
-      letter-spacing: 0.5px;
+      font-weight: 800;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
       display: flex;
       align-items: center;
       gap: 6px;
-      box-shadow: 0 4px 15px rgba(255, 30, 30, 0.3);
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
     }
 
     .join-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(255, 30, 30, 0.5);
+      background: #e60036;
+      transform: scale(1.03);
     }
 
     /* --- HERO QUOTE --- */
     .hero {
       text-align: center;
-      padding: 24px 10px 10px;
+      padding: 20px 10px 5px;
     }
 
     .quote {
       font-style: italic;
-      font-size: 15px;
-      color: #b0b5c0;
-      font-weight: 300;
-      letter-spacing: 0.8px;
+      font-size: 14px;
+      color: #8a8d9b;
+      font-weight: 400;
+      letter-spacing: 0.5px;
     }
 
-    /* --- SECTION DIVIDERS --- */
+    /* --- ANGULAR SECTION DIVIDERS --- */
     .section-divider {
-      text-align: center;
-      padding: 12px 16px;
-      font-size: 15px;
-      font-weight: 800;
+      text-align: left;
+      padding: 10px 16px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1.2px;
-      margin-top: 28px;
-      border-radius: 12px;
+      letter-spacing: 1.5px;
+      margin-top: 26px;
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 10px;
       color: #ffffff;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      background: #14151a;
+      border-left: 5px solid #ff003c;
+      clip-path: polygon(0 0, 96% 0, 100% 100%, 0% 100%);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     }
 
-    .boys-header { 
-      background: linear-gradient(135deg, rgba(255, 30, 30, 0.9), rgba(128, 0, 0, 0.9)); 
-      border: 1px solid rgba(255, 30, 30, 0.4);
-    }
-    
-    .ladies-header { 
-      background: linear-gradient(135deg, rgba(255, 0, 127, 0.9), rgba(138, 0, 80, 0.9)); 
-      border: 1px solid rgba(255, 0, 127, 0.4);
-    }
-    
-    .gallery-header { 
-      background: linear-gradient(135deg, rgba(123, 31, 162, 0.9), rgba(74, 20, 140, 0.9)); 
-      border: 1px solid rgba(123, 31, 162, 0.4);
-    }
-    
-    .map-header { 
-      background: linear-gradient(135deg, rgba(30, 144, 255, 0.9), rgba(0, 76, 128, 0.9)); 
-      border: 1px solid rgba(30, 144, 255, 0.4);
+    .section-divider i {
+      color: #ff003c;
     }
 
-    /* --- GLASSMORPHIC CARDS --- */
+    /* --- GEOMETRIC CARDS (Border-Line Frame) --- */
     .card {
-      background: rgba(22, 25, 32, 0.65);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
-      padding: 20px;
+      background: #121318;
+      border: 1px solid #22252e;
+      border-left: 3px solid #ff003c;
+      padding: 18px;
       margin-top: 14px;
       position: relative;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-      transition: all 0.3s ease;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
     }
 
-    .card:hover {
-      border-color: rgba(255, 255, 255, 0.18);
-      transform: translateY(-2px);
+    .card.highlight-boys {
+      background: linear-gradient(135deg, rgba(255, 0, 60, 0.12) 0%, #121318 100%);
+      border: 1px solid #ff003c;
     }
 
-    .card.highlight-boys { 
-      border: 1px solid rgba(255, 30, 30, 0.5); 
-      background: linear-gradient(180deg, rgba(255, 30, 30, 0.08) 0%, rgba(22, 25, 32, 0.75) 100%);
+    .card.address-card {
+      border-left: 4px solid #ffffff;
     }
 
-    .card.address-card { 
-      border-left: 4px solid #1e90ff; 
+    /* NUMBERED BADGES (Matching Reference Image) */
+    .num-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #ff003c;
+      color: #ffffff;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      width: 24px;
+      height: 22px;
+      clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+      margin-right: 8px;
     }
 
     .badge-offer {
       position: absolute;
       top: -11px;
-      right: 18px;
-      background: #25d366;
-      color: #051a0d;
+      right: 14px;
+      background: #ff003c;
+      color: #ffffff;
       font-size: 10px;
       font-weight: 800;
-      padding: 3px 12px;
-      border-radius: 20px;
+      padding: 3px 10px;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+      letter-spacing: 0.8px;
+      clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
     }
 
-    .price-title { 
-      font-size: 13px; 
-      color: #a0a5b5; 
+    .price-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
+      color: #a0a5b5;
       font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
     }
 
-    .price-amount { 
-      font-size: 28px; 
-      font-weight: 800; 
-      color: #ffffff; 
-      margin: 4px 0; 
+    .price-amount {
+      font-family: 'Oswald', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 2px 0;
       letter-spacing: -0.5px;
     }
 
-    .price-sub { 
-      font-size: 13px; 
-      color: #ff4d4d; 
-      font-weight: 500;
+    .price-sub {
+      font-size: 13px;
+      color: #ff003c;
+      font-weight: 600;
     }
 
     .fee-item {
       display: flex;
       justify-content: space-between;
-      padding: 11px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      font-size: 14px;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 13px;
       color: #e0e0e5;
     }
 
-    .fee-item:last-child { 
-      border-bottom: none; 
+    .fee-item:last-child {
+      border-bottom: none;
     }
 
-    .fee-val { 
-      font-weight: 700; 
-      color: #ff007f; 
+    .fee-val {
+      font-weight: 700;
+      color: #ff003c;
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
     }
 
     /* --- TIMINGS TABLE --- */
@@ -244,93 +244,88 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 10px;
-      font-size: 13px;
+      font-size: 12px;
     }
 
     .timing-table th, .timing-table td {
-      padding: 10px 8px;
+      padding: 9px 8px;
       text-align: left;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .timing-table th {
-      background: rgba(255, 255, 255, 0.04);
-      color: #ff007f;
+      background: #1a1c23;
+      color: #ff003c;
+      font-family: 'Oswald', sans-serif;
       text-transform: uppercase;
-      font-size: 11px;
-      letter-spacing: 0.5px;
-      border-radius: 4px;
+      font-size: 12px;
+      letter-spacing: 0.8px;
     }
 
     /* --- TRAINER CARD --- */
     .trainer-card {
-      background: rgba(22, 25, 32, 0.65);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-radius: 16px;
-      padding: 14px 18px;
+      background: #121318;
+      border: 1px solid #22252e;
+      border-left: 3px solid #ff003c;
+      padding: 14px 16px;
       margin-top: 14px;
       display: flex;
       align-items: center;
       gap: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-left: 4px solid #1e90ff;
     }
 
     .trainer-avatar {
       width: 58px;
       height: 58px;
-      border-radius: 50%;
-      background: #111;
+      background: #000;
       overflow: hidden;
       flex-shrink: 0;
-      border: 2px solid #ff1e1e;
-      box-shadow: 0 0 12px rgba(255, 30, 30, 0.3);
+      border: 2px solid #ff003c;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .trainer-avatar img { 
-      width: 100%; 
-      height: 100%; 
-      object-fit: cover; 
+    .trainer-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .trainer-info h4 { 
-      font-size: 15px; 
-      color: #ffffff; 
-      font-weight: 700; 
+    .trainer-info h4 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 17px;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
-    .trainer-info p { 
-      font-size: 12px; 
-      color: #a0a5b5; 
-      margin-top: 2px;
+    .trainer-info p {
+      font-size: 12px;
+      color: #8a8d9b;
+      margin-top: 1px;
     }
 
-    /* --- GALLERY GRID --- */
+    /* --- GALLERY GRID (Sharp Edges) --- */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
+      gap: 10px;
       margin-top: 14px;
     }
 
     .gallery-item {
       position: relative;
-      border-radius: 14px;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid #22252e;
       aspect-ratio: 4 / 3;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
     }
 
     .gallery-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.4s ease;
+      transition: transform 0.3s ease;
     }
 
     .gallery-item:hover img {
@@ -340,7 +335,7 @@
     /* --- ACTION BUTTONS --- */
     .action-grid {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       margin-top: 16px;
     }
 
@@ -350,29 +345,30 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 12px 16px;
-      border-radius: 50px;
+      padding: 12px 14px;
       text-decoration: none;
+      font-family: 'Oswald', sans-serif;
       font-weight: 700;
-      font-size: 13px;
-      letter-spacing: 0.3px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
       transition: all 0.3s ease;
     }
 
-    .btn-whatsapp-main { 
-      background: linear-gradient(135deg, #25d366, #1da851); 
-      color: #ffffff; 
-      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.25);
+    .btn-whatsapp-main {
+      background: #25d366;
+      color: #000000;
+      clip-path: polygon(6% 0, 100% 0, 94% 100%, 0% 100%);
     }
 
-    .btn-call-main { 
-      background: rgba(255, 255, 255, 0.05); 
-      color: #ffffff; 
-      border: 1px solid rgba(255, 255, 255, 0.15); 
-      backdrop-filter: blur(10px);
+    .btn-call-main {
+      background: #ff003c;
+      color: #ffffff;
+      clip-path: polygon(6% 0, 100% 0, 94% 100%, 0% 100%);
     }
 
     .btn-action:hover {
+      opacity: 0.9;
       transform: translateY(-2px);
     }
 
@@ -380,9 +376,8 @@
     .map-box {
       width: 100%;
       height: 210px;
-      border-radius: 12px;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid #22252e;
       margin-top: 12px;
     }
 
@@ -390,80 +385,84 @@
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
-      right: 20px;
-      background: linear-gradient(135deg, #25d366, #1da851);
-      color: white;
-      padding: 12px 22px;
-      border-radius: 50px;
+      right: 16px;
+      background: #25d366;
+      color: #000000;
+      padding: 10px 18px;
       text-decoration: none;
+      font-family: 'Oswald', sans-serif;
       font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
       display: flex;
       align-items: center;
       gap: 8px;
-      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
       z-index: 1000;
-      font-size: 13px;
-      letter-spacing: 0.3px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: all 0.3s ease;
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.05);
+      border: 1px solid #ffffff;
+      clip-path: polygon(8% 0, 100% 0, 92% 100%, 0% 100%);
     }
 
     footer {
       text-align: center;
       margin-top: 32px;
-      font-size: 12px;
-      color: #727888;
-      letter-spacing: 0.5px;
+      font-size: 11px;
+      color: #606470;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header (Top Left Logo Only) -->
+  <!-- Header -->
   <header>
     <div class="logo-container">
       <img src="https://i.postimg.cc/2ScmfnWJ/FB-IMG-1785949977671.jpg" alt="Faisal Gym Logo" class="header-logo">
       <div class="logo-text">FAISAL'S <span>GYM</span></div>
     </div>
     <a href="https://wa.me/923452671131" target="_blank" class="join-btn">
-      <i class="fa-solid fa-phone"></i> Contact Us
+      <i class="fa-solid fa-phone"></i> Contact
     </a>
   </header>
 
   <div class="container">
     
-    <!-- Clean Hero Section -->
+    <!-- Hero Quote -->
     <section class="hero">
       <p class="quote">"It's never too late to feel great"</p>
     </section>
 
     <!-- BOYS SECTION -->
-    <div class="section-divider boys-header">
+    <div class="section-divider">
       <i class="fa-solid fa-dumbbell"></i> Boys Section
     </div>
 
     <div class="card">
-      <div class="price-title"><i class="fa-regular fa-clock" style="color: #00a8ff;"></i> Boys Operational Timings</div>
-      <div style="font-size: 14px; margin-top: 8px; color: #ffffff;">
+      <div class="price-title">
+        <span class="num-badge">1</span> Timings
+      </div>
+      <div style="font-size: 13px; margin-top: 8px; color: #ffffff;">
         <p><strong>Morning Session:</strong> 6:30 AM – 10:00 AM</p>
-        <p style="margin-top: 2px;"><strong>Evening & Night:</strong> 4:00 PM – 1:30 AM</p>
+        <p style="margin-top: 3px;"><strong>Evening & Night:</strong> 4:00 PM – 1:30 AM</p>
       </div>
     </div>
 
     <div class="card">
-      <div class="price-title">Monthly Membership</div>
-      <div class="price-amount">Rs. 1,800 <span style="font-size: 13px; color:#a0a5b5; font-weight: 400;">/ month</span></div>
+      <div class="price-title">
+        <span class="num-badge">2</span> Monthly Membership
+      </div>
+      <div class="price-amount">Rs. 1,800 <span style="font-size: 13px; color:#8a8d9b; font-weight: 400;">/ month</span></div>
       <div class="price-sub">+ Rs. 700 One-Time Admission Fee</div>
     </div>
 
     <div class="card highlight-boys">
-      <div class="badge-offer">Best Value Package</div>
-      <div class="price-title">3-Month Special Package</div>
-      <div class="price-amount">Rs. 5,400 <span style="font-size: 13px; color:#a0a5b5; font-weight: 400;">/ 3 months</span></div>
+      <div class="badge-offer">Best Value</div>
+      <div class="price-title">
+        <span class="num-badge">3</span> 3-Month Special Package
+      </div>
+      <div class="price-amount">Rs. 5,400 <span style="font-size: 13px; color:#8a8d9b; font-weight: 400;">/ 3 months</span></div>
       <div class="price-sub" style="color: #25d366; font-weight: 700;">🎉 FREE ADMISSION (Save Rs. 700)</div>
     </div>
 
@@ -478,18 +477,22 @@
     </div>
 
     <!-- LADIES SECTION -->
-    <div class="section-divider ladies-header">
+    <div class="section-divider">
       <i class="fa-solid fa-person-dress"></i> Ladies Section
     </div>
 
-    <div class="card" style="border-left: 4px solid #ff007f;">
-      <div class="price-title">Gym Operational Timings:</div>
-      <div style="font-size: 18px; font-weight: 800; color: #ff007f; margin-top: 2px;">9:00 AM — 9:00 PM</div>
-      <div style="font-size: 12px; color: #a0a5b5; margin-top: 4px;">Female Trainer & Separate Facility Available</div>
+    <div class="card">
+      <div class="price-title">
+        <span class="num-badge">1</span> Operational Timings
+      </div>
+      <div style="font-size: 20px; font-family: 'Oswald', sans-serif; font-weight: 700; color: #ff003c; margin-top: 4px;">9:00 AM — 9:00 PM</div>
+      <div style="font-size: 12px; color: #8a8d9b; margin-top: 2px;">Female Trainer & Separate Facility Available</div>
     </div>
 
     <div class="card">
-      <div class="price-title" style="color: #ff007f; font-weight: 700; margin-bottom: 8px;">Fee Structure</div>
+      <div class="price-title" style="margin-bottom: 8px;">
+        <span class="num-badge">2</span> Fee Structure
+      </div>
       <div class="fee-item">
         <span>Admission Fee</span>
         <span class="fee-val">Rs. 1,000</span>
@@ -513,7 +516,9 @@
     </div>
 
     <div class="card">
-      <div class="price-title" style="color: #ff007f; font-weight: 700; margin-bottom: 8px;">Class Schedule</div>
+      <div class="price-title" style="margin-bottom: 8px;">
+        <span class="num-badge">3</span> Class Schedule
+      </div>
       <table class="timing-table">
         <thead>
           <tr>
@@ -550,11 +555,11 @@
           </tr>
         </tbody>
       </table>
-      <p style="font-size: 11px; color: #727888; margin-top: 10px; text-align: center;">* Class Duration: 1 Hour to 1.5 Hours</p>
+      <p style="font-size: 11px; color: #606470; margin-top: 10px; text-align: center;">* Class Duration: 1 Hour to 1.5 Hours</p>
     </div>
 
     <!-- GYM GALLERY SECTION -->
-    <div class="section-divider gallery-header">
+    <div class="section-divider">
       <i class="fa-solid fa-images"></i> Gym Gallery
     </div>
 
@@ -574,13 +579,13 @@
     </div>
 
     <!-- LOCATION & CONTACT SECTION -->
-    <div class="section-divider map-header">
-      <i class="fa-solid fa-map-location-dot"></i> Location & Contact
+    <div class="section-divider">
+      <i class="fa-solid fa-location-dot"></i> Location & Contact
     </div>
 
     <div class="card address-card">
       <div class="price-title">Official Address</div>
-      <p style="font-size: 14px; color: #ffffff; margin-top: 6px; font-weight: 400;">
+      <p style="font-size: 13px; color: #ffffff; margin-top: 6px; font-weight: 400;">
         Second Floor, Meezan Bank Building,<br>
         Main UP More, P-No LS-49, Sector 11-I,<br>
         North Karachi, Near Bike Market.
@@ -597,7 +602,7 @@
     </div>
 
     <div class="card" style="text-align: center;">
-      <div class="price-title">Google Maps View</div>
+      <div class="price-title" style="justify-content: center;">Google Maps View</div>
       <div class="map-box">
         <iframe 
           src="https://maps.google.com/maps?q=Faisal%20Gym%20North%20Karachi&t=&z=14&ie=UTF8&iwloc=&output=embed" 
@@ -618,7 +623,7 @@
 
   <!-- Floating WhatsApp -->
   <a href="https://wa.me/923452671131" target="_blank" class="whatsapp-float">
-    <i class="fa-brands fa-whatsapp" style="font-size: 18px;"></i> WhatsApp Us
+    <i class="fa-brands fa-whatsapp" style="font-size: 18px;"></i> WhatsApp
   </a>
 
 </body>
