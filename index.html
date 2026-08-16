@@ -7,94 +7,94 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        :root {
+            --red: #e50914;
+            --blue: #0066ff;
+            --black: #080808;
+            --card-bg: #111111;
+            --text-white: #ffffff;
+            --text-gray: #bbbbbb;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
         html { scroll-behavior: smooth; }
-        body { 
-            background-color: #080808; 
-            background-image: radial-gradient(#222 15%, transparent 16%);
-            background-size: 20px 20px;
-            color: #fff; 
-            overflow-x: hidden; 
-        }
+        body { background-color: var(--black); color: var(--text-white); overflow-x: hidden; }
 
-        /* Navigation */
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; position: fixed; width: 100%; top: 0; z-index: 100; background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(8px); border-bottom: 2px solid #0066ff; }
-        .logo { font-size: 24px; font-weight: 900; letter-spacing: 2px; text-decoration: none; color: #fff; }
-        .logo span { color: #0066ff; }
+        /* Header */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 12px 50px; position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(0, 0, 0, 0.95); border-bottom: 2px solid var(--red); backdrop-filter: blur(8px); }
+        .logo-img { height: 55px; width: auto; object-fit: contain; }
         nav ul { display: flex; list-style: none; gap: 20px; }
-        nav a { color: #ccc; text-decoration: none; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: #0066ff; }
+        nav a { color: var(--text-white); text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        nav a:hover { color: var(--blue); }
 
-        /* Hero Section with Angled Blue Cut */
+        /* Hero Section - Blue & Red Combo */
         .hero { min-height: 100vh; display: flex; align-items: center; padding: 0 50px; position: relative; overflow: hidden; }
-        
-        .hero-bg-angled {
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 55%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(0, 102, 255, 0.2) 0%, rgba(0, 0, 0, 0.9) 100%), url('https://i.postimg.cc/J7NBtBYK/1785953392555.png') no-repeat center right / cover;
+        .hero-bg {
+            position: absolute; right: 0; top: 0; width: 55%; height: 100%;
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.25) 0%, rgba(229, 9, 20, 0.25) 50%, rgba(0, 0, 0, 0.95) 100%), url('https://i.postimg.cc/J7NBtBYK/1785953392555.png') no-repeat center right / cover;
             clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
-            z-index: 1;
-            border-left: 4px solid #0066ff;
+            z-index: 1; border-left: 4px solid var(--blue);
         }
-
-        .hero-content { position: relative; z-index: 2; max-width: 600px; margin-top: 50px; }
-        .hero-title { font-size: 65px; font-weight: 900; font-style: italic; line-height: 0.95; text-transform: uppercase; margin-bottom: 20px; }
-        .blue-text { color: #0066ff; text-shadow: 0 0 10px rgba(0, 102, 255, 0.5); }
-        .hero-description { font-size: 14px; color: #bbb; line-height: 1.6; margin-bottom: 30px; }
+        .hero-content { position: relative; z-index: 2; max-width: 600px; margin-top: 40px; }
+        .hero-title { font-size: 60px; font-weight: 900; font-style: italic; line-height: 0.95; text-transform: uppercase; margin-bottom: 20px; }
+        .red-text { color: var(--red); text-shadow: 0 0 10px rgba(229, 9, 20, 0.5); }
+        .blue-text { color: var(--blue); text-shadow: 0 0 10px rgba(0, 102, 255, 0.5); }
         
-        /* Key Points Badge (1, 2, 3 Style) */
-        .hero-features { display: flex; flex-direction: column; gap: 15px; margin-bottom: 35px; }
+        .hero-features { display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px; }
         .feature-item { display: flex; align-items: center; gap: 15px; }
-        .badge-num { width: 32px; height: 32px; background: #0066ff; color: #fff; font-weight: 900; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; box-shadow: 0 0 10px rgba(0,102,255,0.6); }
-        .feature-text { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .badge-num { width: 32px; height: 32px; background: linear-gradient(135deg, var(--red), var(--blue)); color: #fff; font-weight: 900; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+        .feature-text { font-size: 13px; font-weight: 700; text-transform: uppercase; }
 
-        .btn-explore { padding: 14px 35px; background: #0066ff; color: #fff; text-decoration: none; font-size: 12px; font-weight: 900; text-transform: uppercase; transition: 0.3s; display: inline-block; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); }
-        .btn-explore:hover { background: #0044cc; box-shadow: 0 0 20px rgba(0, 102, 255, 0.8); }
+        .btn-explore { padding: 14px 35px; background: linear-gradient(90deg, var(--red), var(--blue)); color: #fff; text-decoration: none; font-size: 12px; font-weight: 900; text-transform: uppercase; transition: 0.3s; display: inline-block; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); }
+        .btn-explore:hover { opacity: 0.9; transform: scale(1.03); }
 
         /* Sections */
         section { padding: 80px 50px; position: relative; z-index: 2; }
-        .section-title { font-size: 32px; font-weight: 900; font-style: italic; text-transform: uppercase; margin-bottom: 35px; border-left: 5px solid #0066ff; padding-left: 15px; }
+        .section-title { font-size: 30px; font-weight: 900; font-style: italic; text-transform: uppercase; margin-bottom: 35px; border-left: 5px solid var(--red); padding-left: 15px; }
 
-        /* Fee Structure Cards */
-        .fee-category { margin-bottom: 40px; }
-        .fee-category-title { font-size: 20px; color: #0066ff; text-transform: uppercase; margin-bottom: 15px; font-weight: 900; display: flex; align-items: center; gap: 10px; }
-        
-        .fees-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-        .fee-card { background: #111; border: 1px solid #222; border-top: 3px solid #0066ff; padding: 25px; border-radius: 4px; text-align: center; transition: 0.3s; }
-        .fee-card:hover { border-color: #0066ff; transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,102,255,0.2); }
-        .fee-card h4 { font-size: 13px; text-transform: uppercase; margin-bottom: 10px; color: #aaa; }
+        /* Fees Section */
+        .fee-category-title { font-size: 18px; font-weight: 900; text-transform: uppercase; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .fee-category-title.boys { color: var(--blue); }
+        .fee-category-title.girls { color: var(--red); }
+
+        .fees-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 35px; }
+        .fee-card { background: var(--card-bg); border: 1px solid #222; padding: 25px; border-radius: 4px; text-align: center; transition: 0.3s; position: relative; }
+        .fee-card.boys-card { border-top: 3px solid var(--blue); }
+        .fee-card.girls-card { border-top: 3px solid var(--red); }
+        .fee-card:hover { transform: translateY(-5px); }
+        .fee-card h4 { font-size: 13px; text-transform: uppercase; margin-bottom: 10px; color: var(--text-gray); }
         .fee-card .price { font-size: 24px; font-weight: 900; color: #fff; }
 
         /* Timings Section */
         .timing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .timing-card { background: #111; border: 1px solid #222; padding: 30px; border-radius: 4px; position: relative; overflow: hidden; }
-        .timing-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: #0066ff; }
-        .timing-card h3 { color: #0066ff; font-size: 20px; margin-bottom: 15px; text-transform: uppercase; display: flex; align-items: center; gap: 10px; font-weight: 900; }
+        .timing-card { background: var(--card-bg); border: 1px solid #222; padding: 30px; border-radius: 4px; position: relative; }
+        .timing-card.boys-timing { border-top: 4px solid var(--blue); }
+        .timing-card.girls-timing { border-top: 4px solid var(--red); }
+        .timing-card h3 { font-size: 20px; margin-bottom: 15px; text-transform: uppercase; display: flex; align-items: center; gap: 10px; font-weight: 900; }
+        .timing-card.boys-timing h3 { color: var(--blue); }
+        .timing-card.girls-timing h3 { color: var(--red); }
         .timing-card h4 { color: #fff; font-size: 14px; margin: 15px 0 8px 0; text-transform: uppercase; border-bottom: 1px solid #222; padding-bottom: 5px; }
-        .timing-card p, .timing-card li { font-size: 13px; color: #bbb; line-height: 1.6; list-style: none; }
+        .timing-card p, .timing-card li { font-size: 13px; color: var(--text-gray); line-height: 1.6; list-style: none; }
         .timing-card ul li { margin-bottom: 10px; padding-left: 15px; position: relative; }
-        .timing-card ul li::before { content: '•'; color: #0066ff; position: absolute; left: 0; font-weight: bold; }
-        .badge { background: #0066ff; color: #fff; padding: 2px 8px; border-radius: 3px; font-size: 10px; text-transform: uppercase; font-weight: bold; margin-left: 5px; }
+        .timing-card ul li::before { content: '•'; color: var(--red); position: absolute; left: 0; font-weight: bold; }
+        .badge { background: var(--red); color: #fff; padding: 2px 8px; border-radius: 3px; font-size: 10px; text-transform: uppercase; font-weight: bold; margin-left: 5px; }
 
-        /* Map Location Banner */
+        /* Map Location */
         .map-container { width: 100%; height: 350px; border-radius: 4px; overflow: hidden; border: 1px solid #333; margin-top: 15px; }
         .map-container iframe { width: 100%; height: 100%; border: 0; }
 
-        /* Floating WhatsApp */
-        .whatsapp-float { position: fixed; width: 55px; height: 55px; bottom: 25px; right: 25px; background-color: #25d366; color: #fff; border-radius: 50px; text-align: center; font-size: 28px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; }
-        .whatsapp-float:hover { transform: scale(1.1); }
+        /* Banner Bar */
+        .banner-bar { background: linear-gradient(90deg, var(--red), var(--blue)); color: #fff; padding: 15px; text-align: center; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; margin-top: 40px; clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%); }
 
-        /* Footer Banner Style */
-        footer { background: #000; padding: 25px 50px; text-align: center; border-top: 2px solid #0066ff; font-size: 12px; color: #888; }
-        .banner-bar { background: #0066ff; color: #fff; padding: 15px; text-align: center; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; margin-top: 40px; clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%); }
+        /* WhatsApp Button */
+        .whatsapp-float { position: fixed; width: 55px; height: 55px; bottom: 25px; right: 25px; background-color: #25d366; color: #fff; border-radius: 50px; text-align: center; font-size: 28px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; }
+
+        /* Footer */
+        footer { background: #000; padding: 25px 50px; text-align: center; border-top: 2px solid var(--red); font-size: 12px; color: #666; }
 
         @media (max-width: 768px) {
             header, .hero, section { padding: 20px; }
-            .hero-title { font-size: 40px; }
-            .hero-bg-angled { width: 100%; opacity: 0.25; clip-path: none; }
+            .hero-title { font-size: 38px; }
+            .hero-bg { width: 100%; opacity: 0.25; clip-path: none; }
             nav ul { display: none; }
         }
     </style>
@@ -102,7 +102,7 @@
 <body>
 
     <header>
-        <a href="#" class="logo"><span>FAISAL</span> GYM</a>
+        <a href="#"><img src="https://i.postimg.cc/kG1ksMVd/FB-IMG-1785949977671.jpg" alt="Faisal Gym Logo" class="logo-img"></a>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -115,12 +115,12 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-bg-angled"></div>
+        <div class="hero-bg"></div>
         <div class="hero-content">
             <h1 class="hero-title">
                 GET <span class="blue-text">FIT</span><br>
                 ELEVATE<br>
-                YOUR SPIRIT
+                YOUR <span class="red-text">SPIRIT</span>
             </h1>
             
             <div class="hero-features">
@@ -147,44 +147,40 @@
         <h2 class="section-title">Fee Structure</h2>
         
         <!-- Boys Fees -->
-        <div class="fee-category">
-            <div class="fee-category-title"><i class="fa-solid fa-mars"></i> Boys Section Fees</div>
-            <div class="fees-grid">
-                <div class="fee-card">
-                    <h4>Admission Fee</h4>
-                    <div class="price">Rs. 700</div>
-                </div>
-                <div class="fee-card">
-                    <h4>Monthly Fee</h4>
-                    <div class="price">Rs. 1,800</div>
-                </div>
+        <div class="fee-category-title boys"><i class="fa-solid fa-mars"></i> Boys Section Fees</div>
+        <div class="fees-grid">
+            <div class="fee-card boys-card">
+                <h4>Admission Fee</h4>
+                <div class="price">Rs. 700</div>
+            </div>
+            <div class="fee-card boys-card">
+                <h4>Monthly Fee</h4>
+                <div class="price">Rs. 1,800</div>
             </div>
         </div>
 
         <!-- Girls Fees -->
-        <div class="fee-category">
-            <div class="fee-category-title"><i class="fa-solid fa-venus"></i> Girls Section Fees</div>
-            <div class="fees-grid">
-                <div class="fee-card">
-                    <h4>Admission Fee</h4>
-                    <div class="price">Rs. 1,000</div>
-                </div>
-                <div class="fee-card">
-                    <h4>Fusion (Group Class)</h4>
-                    <div class="price">Rs. 2,000</div>
-                </div>
-                <div class="fee-card">
-                    <h4>Strength Training</h4>
-                    <div class="price">Rs. 3,000</div>
-                </div>
-                <div class="fee-card">
-                    <h4>CrossFit</h4>
-                    <div class="price">Rs. 3,000</div>
-                </div>
-                <div class="fee-card">
-                    <h4>Yoga</h4>
-                    <div class="price">Rs. 3,000</div>
-                </div>
+        <div class="fee-category-title girls"><i class="fa-solid fa-venus"></i> Girls Section Fees</div>
+        <div class="fees-grid">
+            <div class="fee-card girls-card">
+                <h4>Admission Fee</h4>
+                <div class="price">Rs. 1,000</div>
+            </div>
+            <div class="fee-card girls-card">
+                <h4>Fusion (Group Class)</h4>
+                <div class="price">Rs. 2,000</div>
+            </div>
+            <div class="fee-card girls-card">
+                <h4>Strength Training</h4>
+                <div class="price">Rs. 3,000</div>
+            </div>
+            <div class="fee-card girls-card">
+                <h4>CrossFit</h4>
+                <div class="price">Rs. 3,000</div>
+            </div>
+            <div class="fee-card girls-card">
+                <h4>Yoga</h4>
+                <div class="price">Rs. 3,000</div>
             </div>
         </div>
     </section>
@@ -194,8 +190,8 @@
         <h2 class="section-title">Gym Timings & Schedule</h2>
         <div class="timing-grid">
             
-            <!-- Boys Section -->
-            <div class="timing-card">
+            <!-- Boys Timings -->
+            <div class="timing-card boys-timing">
                 <h3><i class="fa-solid fa-mars"></i> Boys Timings</h3>
                 <h4>Morning Shift</h4>
                 <p><i class="fa-regular fa-clock"></i> 6:30 AM – 10:00 AM</p>
@@ -204,8 +200,8 @@
                 <p><i class="fa-regular fa-clock"></i> 4:00 PM – 1:30 AM</p>
             </div>
 
-            <!-- Girls Section -->
-            <div class="timing-card">
+            <!-- Girls Timings -->
+            <div class="timing-card girls-timing">
                 <h3><i class="fa-solid fa-venus"></i> Girls Timings</h3>
                 <p><strong>Overall Gym Timing:</strong> 9:00 AM – 9:00 PM</p>
                 <p style="margin-top: 5px; font-size: 12px; color: #aaa;"><i class="fa-solid fa-user-check"></i> Counter Staff: Female staff present</p>
