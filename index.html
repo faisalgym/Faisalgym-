@@ -1,599 +1,286 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAISAL GYM - Fitness & Training Center</title>
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>Faisal Gym Karachi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* CSS Reset & Variables */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-        }
-
         :root {
-            --primary: #ff3b3f;
-            --primary-hover: #e0282c;
-            --dark-bg: #111111;
-            --card-bg: #1a1a1a;
-            --text-light: #ffffff;
-            --text-gray: #a0a0a0;
-            --pink-accent: #e91e63;
+            --red: #e50914;
+            --blue: #0066ff;
+            --black: #080808;
+            --card-bg: #111111;
+            --text-white: #ffffff;
+            --text-gray: #bbbbbb;
         }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--black); color: var(--text-white); overflow-x: hidden; }
 
-        body {
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-            line-height: 1.6;
+        /* Header */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 12px 50px; position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(0, 0, 0, 0.95); border-bottom: 2px solid var(--red); backdrop-filter: blur(8px); }
+        .logo-img { height: 55px; width: auto; object-fit: contain; }
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav a { color: var(--text-white); text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        nav a:hover { color: var(--blue); }
+
+        /* Hero Section - Blue & Red Combo */
+        .hero { min-height: 100vh; display: flex; align-items: center; padding: 0 50px; position: relative; overflow: hidden; }
+        .hero-bg {
+            position: absolute; right: 0; top: 0; width: 55%; height: 100%;
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.25) 0%, rgba(229, 9, 20, 0.25) 50%, rgba(0, 0, 0, 0.95) 100%), url('https://i.postimg.cc/J7NBtBYK/1785953392555.png') no-repeat center right / cover;
+            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+            z-index: 1; border-left: 4px solid var(--blue);
         }
+        .hero-content { position: relative; z-index: 2; max-width: 600px; margin-top: 40px; }
+        .hero-title { font-size: 60px; font-weight: 900; font-style: italic; line-height: 0.95; text-transform: uppercase; margin-bottom: 20px; }
+        .red-text { color: var(--red); text-shadow: 0 0 10px rgba(229, 9, 20, 0.5); }
+        .blue-text { color: var(--blue); text-shadow: 0 0 10px rgba(0, 102, 255, 0.5); }
+        
+        .hero-features { display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px; }
+        .feature-item { display: flex; align-items: center; gap: 15px; }
+        .badge-num { width: 32px; height: 32px; background: linear-gradient(135deg, var(--red), var(--blue)); color: #fff; font-weight: 900; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+        .feature-text { font-size: 13px; font-weight: 700; text-transform: uppercase; }
 
-        /* Top Bar */
-        .top-bar {
-            background: #080808;
-            padding: 8px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.85rem;
-            color: var(--text-gray);
-            border-bottom: 1px solid #222;
+        .btn-explore { padding: 14px 35px; background: linear-gradient(90deg, var(--red), var(--blue)); color: #fff; text-decoration: none; font-size: 12px; font-weight: 900; text-transform: uppercase; transition: 0.3s; display: inline-block; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); }
+        .btn-explore:hover { opacity: 0.9; transform: scale(1.03); }
+
+        /* Sections */
+        section { padding: 80px 50px; position: relative; z-index: 2; }
+        .section-title { font-size: 30px; font-weight: 900; font-style: italic; text-transform: uppercase; margin-bottom: 35px; border-left: 5px solid var(--red); padding-left: 15px; }
+
+        /* Fees Section */
+        .fee-category-title { font-size: 18px; font-weight: 900; text-transform: uppercase; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .fee-category-title.boys { color: var(--blue); }
+        .fee-category-title.girls { color: var(--red); }
+
+        .fees-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 35px; }
+        .fee-card { background: var(--card-bg); border: 1px solid #222; padding: 25px; border-radius: 4px; text-align: center; transition: 0.3s; position: relative; }
+        .fee-card.boys-card { border-top: 3px solid var(--blue); }
+        .fee-card.girls-card { border-top: 3px solid var(--red); }
+        .fee-card:hover { transform: translateY(-5px); }
+        .fee-card h4 { font-size: 13px; text-transform: uppercase; margin-bottom: 10px; color: var(--text-gray); }
+        .fee-card .price { font-size: 24px; font-weight: 900; color: #fff; }
+
+        /* QR Payment Box */
+        .payment-box {
+            background: var(--card-bg);
+            border: 1px solid #222;
+            border-top: 3px solid var(--red);
+            border-bottom: 3px solid var(--blue);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 450px;
+            margin: 20px auto 0 auto;
         }
-
-        .top-bar .info span {
-            margin-right: 15px;
-        }
-
-        .top-bar i {
-            color: var(--primary);
-            margin-right: 5px;
-        }
-
-        /* Header / Navbar */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(17, 17, 17, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #222;
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--text-light);
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-
-        .logo span {
-            color: var(--primary);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
-
-        nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--primary);
-        }
-
-        .btn-join {
-            background: var(--primary);
+        .payment-box h3 {
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 900;
+            margin-bottom: 10px;
             color: #fff;
-            padding: 8px 20px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .btn-join:hover {
-            background: var(--primary-hover);
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 80vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            padding: 0 20px;
+            gap: 10px;
         }
-
-        .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-        }
-
-        .hero-content h1 span {
-            color: var(--primary);
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
+        .payment-box p {
+            font-size: 12px;
             color: var(--text-gray);
-            max-width: 600px;
-            margin: 0 auto 25px;
+            margin-bottom: 18px;
         }
-
-        /* Section Styling */
-        section {
-            padding: 70px 5%;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 2.2rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .section-title h2 span {
-            color: var(--primary);
-        }
-
-        .section-title p {
-            color: var(--text-gray);
-            font-size: 0.95rem;
-        }
-
-        /* Services Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .service-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #252525;
-            transition: 0.3s;
-            text-align: center;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
-        .service-card i {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .service-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-
-        .service-card p {
-            color: var(--text-gray);
-            font-size: 0.9rem;
-        }
-
-        /* Pricing Section */
-        .fee-category-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 40px 0 20px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid var(--primary);
-            display: inline-block;
-        }
-
-        .fee-category-title.girls {
-            border-color: var(--pink-accent);
-            color: var(--pink-accent);
-        }
-
-        .fees-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .fee-card {
-            background: var(--card-bg);
-            border: 1px solid #2a2a2a;
-            border-radius: 10px;
-            padding: 25px;
-            position: relative;
-            transition: 0.3s;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .fee-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        .fee-card.girls-card {
-            border-top: 3px solid var(--pink-accent);
-        }
-
-        .fee-card.girls-card:hover {
-            border-color: var(--pink-accent);
-        }
-
-        .fee-card.featured {
-            border: 2px solid var(--pink-accent);
-            background: #1f141a;
-        }
-
-        .card-badge {
-            position: absolute;
-            top: -12px;
-            right: 15px;
-            background: #333;
-            color: #fff;
-            font-size: 0.75rem;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .card-badge.popular {
-            background: var(--primary);
-        }
-
-        .card-badge.vip {
-            background: var(--pink-accent);
-        }
-
-        .fee-card h4 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .fee-card .price {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .fee-card.girls-card .price {
-            color: var(--pink-accent);
-        }
-
-        .fee-card .price span {
-            font-size: 0.85rem;
-            font-weight: 400;
-            color: var(--text-gray);
-        }
-
-        .fee-features {
-            list-style: none;
-            font-size: 0.88rem;
-            color: var(--text-gray);
-        }
-
-        .fee-features li {
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .fee-features li i {
-            color: #2eb85c;
-            font-size: 0.8rem;
+        .qr-img {
+            width: 220px;
+            height: auto;
+            border-radius: 8px;
+            border: 3px solid #222;
+            padding: 5px;
+            background: #fff;
+            box-shadow: 0 0 15px rgba(229, 9, 20, 0.3);
         }
 
         /* Timings Section */
-        .timing-box {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 30px;
-            max-width: 700px;
-            margin: 0 auto;
-            border: 1px solid #252525;
-        }
+        .timing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .timing-card { background: var(--card-bg); border: 1px solid #222; padding: 30px; border-radius: 4px; position: relative; }
+        .timing-card.boys-timing { border-top: 4px solid var(--blue); }
+        .timing-card.girls-timing { border-top: 4px solid var(--red); }
+        .timing-card h3 { font-size: 20px; margin-bottom: 15px; text-transform: uppercase; display: flex; align-items: center; gap: 10px; font-weight: 900; }
+        .timing-card.boys-timing h3 { color: var(--blue); }
+        .timing-card.girls-timing h3 { color: var(--red); }
+        .timing-card h4 { color: #fff; font-size: 14px; margin: 15px 0 8px 0; text-transform: uppercase; border-bottom: 1px solid #222; padding-bottom: 5px; }
+        .timing-card p, .timing-card li { font-size: 13px; color: var(--text-gray); line-height: 1.6; list-style: none; }
+        .timing-card ul li { margin-bottom: 10px; padding-left: 15px; position: relative; }
+        .timing-card ul li::before { content: '•'; color: var(--red); position: absolute; left: 0; font-weight: bold; }
+        .badge { background: var(--red); color: #fff; padding: 2px 8px; border-radius: 3px; font-size: 10px; text-transform: uppercase; font-weight: bold; margin-left: 5px; }
 
-        .timing-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 12px 0;
-            border-bottom: 1px solid #282828;
-        }
+        /* Map Location */
+        .map-container { width: 100%; height: 350px; border-radius: 4px; overflow: hidden; border: 1px solid #333; margin-top: 15px; }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+        .map-btn { background: var(--blue); color: #fff; padding: 12px 25px; text-decoration: none; font-weight: bold; font-size: 13px; border-radius: 4px; display: inline-block; text-transform: uppercase; transition: 0.3s; }
+        .map-btn:hover { background: var(--red); }
 
-        .timing-row:last-child {
-            border-bottom: none;
-        }
+        /* Banner Bar */
+        .banner-bar { background: linear-gradient(90deg, var(--red), var(--blue)); color: #fff; padding: 15px; text-align: center; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; margin-top: 40px; clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%); }
 
-        .timing-row .label {
-            font-weight: 600;
-        }
-
-        .timing-row .time {
-            color: var(--primary);
-            font-weight: 600;
-        }
+        /* WhatsApp Button */
+        .whatsapp-float { position: fixed; width: 55px; height: 55px; bottom: 25px; right: 25px; background-color: #25d366; color: #fff; border-radius: 50px; text-align: center; font-size: 28px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; }
 
         /* Footer */
-        footer {
-            background: #080808;
-            padding: 30px 5%;
-            text-align: center;
-            border-top: 1px solid #222;
-            color: var(--text-gray);
-            font-size: 0.9rem;
-        }
+        footer { background: #000; padding: 25px 50px; text-align: center; border-top: 2px solid var(--red); font-size: 12px; color: #666; }
 
-        /* Mobile Responsive Nav */
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-            nav ul {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .hero-content h1 {
-                font-size: 2.3rem;
-            }
-            .top-bar {
-                flex-direction: column;
-                gap: 5px;
-                text-align: center;
-            }
+            header, .hero, section { padding: 20px; }
+            .hero-title { font-size: 38px; }
+            .hero-bg { width: 100%; opacity: 0.25; clip-path: none; }
+            nav ul { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Info Bar -->
-    <div class="top-bar">
-        <div class="info">
-            <span><i class="fa-solid fa-location-dot"></i> Faisal Gym, Karachi</span>
-            <span><i class="fa-solid fa-phone"></i> 0345-2671131</span>
-        </div>
-        <div class="hours">
-            <span><i class="fa-solid fa-clock"></i> Open 6 Days a Week</span>
-        </div>
-    </div>
-
-    <!-- Header Navigation -->
     <header>
-        <a href="#" class="logo">FAISAL <span>GYM</span></a>
+        <a href="#"><img src="https://i.postimg.cc/kG1ksMVd/FB-IMG-1785949977671.jpg" alt="Faisal Gym Logo" class="logo-img"></a>
         <nav>
             <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#pricing">Fees & Packages</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#fees">Fee Structure</a></li>
                 <li><a href="#timings">Timings</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#location">Location</a></li>
             </ul>
         </nav>
-        <a href="https://wa.me/923452671131" class="btn-join" target="_blank"><i class="fa-brands fa-whatsapp"></i> Join Now</a>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
         <div class="hero-content">
-            <h1>BUILD YOUR <span>BEST SELF</span></h1>
-            <p>Join Faisal Gym today. Professional Equipment, Expert Trainers, and Dedicated Girls Exclusive Hours.</p>
-            <a href="#pricing" class="btn-join" style="padding: 12px 30px; font-size: 1rem;">View Fees & Packages</a>
+            <h1 class="hero-title">
+                GET <span class="blue-text">FIT</span><br>
+                ELEVATE<br>
+                YOUR <span class="red-text">SPIRIT</span>
+            </h1>
+            
+            <div class="hero-features">
+                <div class="feature-item">
+                    <div class="badge-num">1</div>
+                    <div class="feature-text">Separate Shifts For Boys & Girls</div>
+                </div>
+                <div class="feature-item">
+                    <div class="badge-num">2</div>
+                    <div class="feature-text">Certified Male & Female Trainers</div>
+                </div>
+                <div class="feature-item">
+                    <div class="badge-num">3</div>
+                    <div class="feature-text">Strength, Fusion, CrossFit & Yoga</div>
+                </div>
+            </div>
+
+            <a href="#fees" class="btn-explore">JOIN US NOW</a>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services">
-        <div class="section-title">
-            <h2>Our <span>Services</span></h2>
-            <p>Everything you need to achieve your fitness goals</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fa-solid fa-dumbbell"></i>
-                <h3>Heavy Weightlifting</h3>
-                <p>Complete range of modern iron plates, dumbbells, and strength machines.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-heart-pulse"></i>
-                <h3>Cardio & Aerobics</h3>
-                <p>Treadmills, elliptical trainers, and fat-burning cardio equipment.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-venus"></i>
-                <h3>Girls Exclusive Hours</h3>
-                <p>Private, safe, and fully equipped setup for ladies with female instructors.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-user-ninja"></i>
-                <h3>Crossfit & Functional</h3>
-                <p>High-intensity stamina building and agility training classes.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-spa"></i>
-                <h3>Yoga & Wellness</h3>
-                <p>Mindful stretching, posture improvement, and stress management.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-person-running"></i>
-                <h3>Personal Training</h3>
-                <p>One-on-one custom workout plans and diet guidance.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Fees & Packages Section -->
-    <section id="pricing">
-        <div class="section-title">
-            <h2>Fees & <span>Packages</span></h2>
-            <p>Transparent pricing with no hidden charges</p>
-        </div>
-
-        <!-- Boys Section Fees -->
-        <div class="fee-category-title"><i class="fa-solid fa-mars"></i> Boys Section Fees</div>
+    <!-- Fees Section -->
+    <section id="fees">
+        <h2 class="section-title">Fee Structure</h2>
+        
+        <!-- Boys Fees -->
+        <div class="fee-category-title boys"><i class="fa-solid fa-mars"></i> Boys Section Fees</div>
         <div class="fees-grid">
-            <div class="fee-card">
+            <div class="fee-card boys-card">
                 <h4>Admission Fee</h4>
-                <div class="price">Rs. 1,000 <span>(One Time)</span></div>
-                <ul class="fee-features">
-                    <li><i class="fa-solid fa-check"></i> Registration & ID</li>
-                    <li><i class="fa-solid fa-check"></i> Gym Access Card</li>
-                </ul>
+                <div class="price">Rs. 700</div>
             </div>
-            <div class="fee-card">
-                <h4>Monthly Regular Fee</h4>
-                <div class="price">Rs. 1,500 <span>/ Month</span></div>
-                <ul class="fee-features">
-                    <li><i class="fa-solid fa-check"></i> Weight Training Area</li>
-                    <li><i class="fa-solid fa-check"></i> General Trainer Support</li>
-                </ul>
-            </div>
-            <div class="fee-card">
-                <h4>Cardio + Gym Package</h4>
-                <div class="price">Rs. 2,500 <span>/ Month</span></div>
-                <ul class="fee-features">
-                    <li><i class="fa-solid fa-check"></i> Full Gym & Heavy Weights</li>
-                    <li><i class="fa-solid fa-check"></i> Unlimited Treadmill & Cardio</li>
-                </ul>
-            </div>
-            <div class="fee-card">
-                <div class="card-badge popular">Popular</div>
-                <h4>Personal Training</h4>
-                <div class="price">Rs. 5,000 <span>/ Month</span></div>
-                <ul class="fee-features">
-                    <li><i class="fa-solid fa-check"></i> 1-on-1 Dedicated Trainer</li>
-                    <li><i class="fa-solid fa-check"></i> Customized Diet Plan</li>
-                </ul>
+            <div class="fee-card boys-card">
+                <h4>Monthly Fee</h4>
+                <div class="price">Rs. 1,800</div>
             </div>
         </div>
 
-        <!-- Girls Section Fees & Class Packages -->
-        <div class="fee-category-title girls"><i class="fa-solid fa-venus"></i> Girls Section Fees & Class Packages</div>
+        <!-- Girls Fees Cards -->
+        <div class="fee-category-title girls"><i class="fa-solid fa-venus"></i> Girls Section Fees</div>
         <div class="fees-grid">
             <div class="fee-card girls-card">
-                <div class="card-badge">Basic</div>
                 <h4>Admission Fee</h4>
-                <div class="price">Rs. 1,000 <span>(One Time)</span></div>
-                <ul class="fee-features">
-                    <li><i class="fa-solid fa-check"></i> Registration & Locker Access</li>
-                    <li><i class="fa-solid fa-check"></i> Female Trainer Support</li>
-                </ul>
+                <div class="price">Rs. 1,000</div>
             </div>
             <div class="fee-card girls-card">
-                <h4>Machine & Gym Monthly</h4>
-                <div class="price">Rs. 1,500 <span>/ Month</span></div>
-                <ul class="fee-features">
-                    <li><i class="fa-solid fa-check"></i> Gym & Weight Machines</li>
-                    <li><i class="fa-solid fa-check"></i> Dedicated Ladies Hours</li>
-                </ul>
+                <h4>Monthly Fee</h4>
+                <div class="price">Rs. 2,000</div>
             </div>
-            <div class="fee-card girls-card">
-                <h4>Fusion (Group Class)</h4>
-                <div class="price">Rs. 2,000 <span>/ Month</span></div>
-                <ul class="fee-features">
-                    <li><i class="fa-solid fa-check"></i> Aerobics & Group Workout</li>
-                    <li><i class="fa-solid fa-check"></i> Rhythm & Music Cardio</li>
-                </ul>
-            </div>
-            <div class="fee-card girls-card">
-                <h4>Strength Training</h4>
-                <div class="price">Rs. 3,000 <span>/ Month</span></div>
-                <ul class="fee-features">
-                    <li><i class="fa-solid fa-check"></i> Body Toning & Toning Exercises</li>
-                    <li><i class="fa-solid fa-check"></i> Strength Building Machines</li>
-                </ul>
-            </div>
-            <div class="fee-card girls-card">
-                <h4>CrossFit Package</h4>
-                <div class="price">Rs. 3,000 <span>/ Month</span></div>
-                <ul class="fee-features">
-                    <li><i class="fa-solid fa-check"></i> High Intensity Fat Burn</li>
-                    <li><i class="fa-solid fa-check"></i> Stamina & Agility Workouts</li>
-                </ul>
-            </div>
-            <div class="fee-card girls-card">
-                <div class="card-badge popular">Popular</div>
-                <h4>Yoga & Wellness Class</h4>
-                <div class="price">Rs. 3,000 <span>/ Month</span></div>
-                <ul class="fee-features">
-                    <li><i class="fa-solid fa-check"></i> Flexibility & Stress Relief</li>
-                    <li><i class="fa-solid fa-check"></i> Certified Yoga Instructor</li>
-                </ul>
-            </div>
-            <div class="fee-card girls-card featured">
-                <div class="card-badge vip">VIP All Access</div>
-                <h4>Full Ladies VIP Package</h4>
-                <div class="price">Rs. 5,000 <span>/ Month</span></div>
-                <ul class="fee-features">
-                    <li><i class="fa-solid fa-check"></i> All Classes (Yoga, CrossFit, Fusion)</li>
-                    <li><i class="fa-solid fa-check"></i> Unlimited Gym & Machines</li>
-                    <li><i class="fa-solid fa-check"></i> Personal Fitness Guidance</li>
-                    <li><i class="fa-solid fa-check"></i> Diet Plan & Monthly Assessment</li>
-                </ul>
-            </div>
+        </div>
+
+        <!-- Online Payment Section -->
+        <div class="payment-box">
+            <h3><i class="fa-solid fa-qrcode" style="color: var(--red);"></i> Online Payment</h3>
+            <p>Scan this QR code to transfer fees via mobile banking / EasyPaisa / JazzCash</p>
+            <img src="https://i.postimg.cc/j2fJR2y9/MZN-QR-20267167040.jpg" alt="Faisal Gym QR Payment Code" class="qr-img">
         </div>
     </section>
 
     <!-- Timings Section -->
     <section id="timings">
-        <div class="section-title">
-            <h2>Gym <span>Timings</span></h2>
-            <p>Convenient timing batches for everyone</p>
-        </div>
-        <div class="timing-box">
-            <div class="timing-row">
-                <span class="label"><i class="fa-solid fa-venus"></i> Ladies Exclusive Timing</span>
-                <span class="time">10:00 AM – 04:00 PM</span>
+        <h2 class="section-title">Gym Timings & Schedule</h2>
+        <div class="timing-grid">
+            
+            <!-- Boys Timings -->
+            <div class="timing-card boys-timing">
+                <h3><i class="fa-solid fa-mars"></i> Boys Timings</h3>
+                <h4>Morning Shift</h4>
+                <p><i class="fa-regular fa-clock"></i> 6:30 AM – 10:00 AM</p>
+                
+                <h4>Evening & Night Shift</h4>
+                <p><i class="fa-regular fa-clock"></i> 4:00 PM – 1:30 AM</p>
             </div>
-            <div class="timing-row">
-                <span class="label"><i class="fa-solid fa-mars"></i> Gents Timing (Evening)</span>
-                <span class="time">04:30 PM – 11:30 PM</span>
+
+            <!-- Girls Timings -->
+            <div class="timing-card girls-timing">
+                <h3><i class="fa-solid fa-venus"></i> Girls Timings</h3>
+                <p><strong>Overall Gym Timing:</strong> 9:00 AM – 9:00 PM</p>
+                <p style="margin-top: 5px; font-size: 12px; color: #aaa;"><i class="fa-solid fa-user-check"></i> Counter Staff: Female staff present</p>
+                
+                <h4>Class Timings <span class="badge">Duration: 1.5 Hours</span></h4>
+                <ul>
+                    <li><strong>Morning Fusion Class:</strong> 9:30 AM – 10:45 AM</li>
+                    <li><strong>Strength Training:</strong> 10:00 AM – 4:00 PM</li>
+                    <li><strong>Afternoon Class:</strong> 3:30 PM – 4:45 PM</li>
+                    <li><strong>Evening Slot 1:</strong> 5:15 PM – 6:15 PM <br><small style="color: #888;">(Female Trainer arrives at 5:00 PM)</small></li>
+                    <li><strong>Evening Slot 2 / Main Class:</strong> 7:15 PM – 8:15 PM <br><small style="color: #888;">(Class active 7:30 PM – 8:30 PM)</small></li>
+                </ul>
             </div>
-            <div class="timing-row">
-                <span class="label"><i class="fa-solid fa-calendar-xmark"></i> Weekly Off</span>
-                <span class="time" style="color: #888;">Sunday Closed</span>
-            </div>
+
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <p><strong>FAISAL GYM & FITNESS CENTER</strong></p>
-        <p>Karachi, Pakistan | WhatsApp: <a href="https://wa.me/923452671131" style="color: var(--primary); text-decoration: none;">0345-2671131</a></p>
-        <p style="margin-top: 15px; font-size: 0.8rem; color: #555;">&copy; 2026 Faisal Gym. All Rights Reserved.</p>
+    <!-- Location Section -->
+    <section id="location">
+        <h2 class="section-title">Location</h2>
+        <p style="color: #ccc; margin-bottom: 15px;">Faisal Gym, Karachi, Pakistan.</p>
+        
+        <div class="map-container">
+            <iframe src="https://maps.google.com/maps?q=Faisal%20Gym%20Karachi&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="https://www.google.com/maps/search/?api=1&query=Faisal+Gym+Karachi" target="_blank" class="map-btn">
+                <i class="fa-solid fa-location-dot"></i> Open Location in Google Maps
+            </a>
+        </div>
+
+        <div class="banner-bar">
+            FAISAL GYM KARACHI - JOIN US TODAY
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923452671131" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <p>&copy; 2026 Faisal Gym Karachi. All Rights Reserved.</p>
     </footer>
 
 </body>
