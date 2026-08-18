@@ -14,7 +14,7 @@
             --black: #080808;
             --card-bg: #111111;
             --text-white: #ffffff;
-            --text-gray: #bbbbbb;
+            --text-light: #f0f0f0;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Bebas Neue', sans-serif; letter-spacing: 1px; }
         html { scroll-behavior: smooth; }
@@ -24,7 +24,7 @@
         header { display: flex; justify-content: space-between; align-items: center; padding: 12px 50px; position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(0, 0, 0, 0.95); border-bottom: 2px solid var(--red); backdrop-filter: blur(8px); }
         .logo-img { height: 55px; width: auto; object-fit: contain; }
         nav ul { display: flex; list-style: none; gap: 20px; }
-        nav a { color: var(--text-white); text-decoration: none; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; transition: 0.3s; }
+        nav a { color: var(--text-white); text-decoration: none; font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; transition: 0.3s; }
         nav a:hover { color: var(--blue); }
 
         /* Hero Section */
@@ -36,16 +36,16 @@
             z-index: 1; border-left: 4px solid var(--blue);
         }
         .hero-content { position: relative; z-index: 2; max-width: 600px; margin-top: 80px; margin-bottom: 40px; }
-        .hero-title { font-size: 70px; font-weight: 900; line-height: 0.95; text-transform: uppercase; margin-bottom: 20px; }
+        .hero-title { font-size: 72px; font-weight: 900; line-height: 0.95; text-transform: uppercase; margin-bottom: 25px; }
         .red-text { color: var(--red); text-shadow: 0 0 10px rgba(229, 9, 20, 0.5); }
         .blue-text { color: var(--blue); text-shadow: 0 0 10px rgba(0, 102, 255, 0.5); }
         
         .hero-features { display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px; }
         .feature-item { display: flex; align-items: center; gap: 15px; }
-        .badge-num { width: 32px; height: 32px; background: linear-gradient(135deg, var(--red), var(--blue)); color: #fff; font-weight: 900; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
-        .feature-text { font-size: 18px; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
+        .badge-num { width: 36px; height: 36px; background: linear-gradient(135deg, var(--red), var(--blue)); color: #fff; font-weight: 900; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+        .feature-text { font-size: 22px; text-transform: uppercase; display: flex; align-items: center; gap: 10px; color: var(--text-white); }
 
-        .btn-explore { padding: 12px 35px; background: linear-gradient(90deg, var(--red), var(--blue)); color: #fff; text-decoration: none; font-size: 18px; text-transform: uppercase; transition: 0.3s; display: inline-block; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); margin-bottom: 25px; }
+        .btn-explore { padding: 14px 40px; background: linear-gradient(90deg, var(--red), var(--blue)); color: #fff; text-decoration: none; font-size: 20px; text-transform: uppercase; transition: 0.3s; display: inline-block; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); margin-bottom: 25px; font-weight: bold; }
         .btn-explore:hover { opacity: 0.9; transform: scale(1.03); }
 
         /* Video Container Styling */
@@ -68,44 +68,44 @@
 
         /* Sections */
         section { padding: 80px 50px; position: relative; z-index: 2; }
-        .section-title { font-size: 40px; text-transform: uppercase; margin-bottom: 35px; border-left: 5px solid var(--red); padding-left: 15px; }
+        .section-title { font-size: 42px; text-transform: uppercase; margin-bottom: 35px; border-left: 5px solid var(--red); padding-left: 15px; color: #fff; }
 
         /* Facilities Section */
         .facilities-list { display: flex; flex-direction: column; gap: 15px; max-width: 800px; margin: 0 auto; }
         .facility-item { background: var(--card-bg); border: 1px solid #222; border-left: 4px solid var(--red); padding: 18px 25px; border-radius: 4px; display: flex; align-items: center; gap: 20px; transition: 0.3s; }
         .facility-item:hover { border-left-color: var(--blue); transform: translateX(5px); }
-        .facility-item i { font-size: 24px; color: var(--blue); width: 30px; text-align: center; }
-        .facility-item span { font-size: 20px; color: var(--text-white); text-transform: uppercase; letter-spacing: 1px; }
+        .facility-item i { font-size: 26px; color: var(--blue); width: 30px; text-align: center; }
+        .facility-item span { font-size: 22px; color: var(--text-white); text-transform: uppercase; letter-spacing: 1px; font-weight: bold; }
 
         /* Fees Section */
-        .fee-category-title { font-size: 24px; text-transform: uppercase; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
-        .fee-category-title.boys { color: var(--blue); }
-        .fee-category-title.girls { color: var(--red); }
+        .fee-category-title { font-size: 26px; text-transform: uppercase; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; font-weight: bold; }
+        .fee-category-title.boys { color: #3385ff; }
+        .fee-category-title.girls { color: #ff333d; }
 
-        .fees-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 25px; }
-        .fee-card { background: var(--card-bg); border: 1px solid #222; padding: 25px; border-radius: 4px; text-align: center; transition: 0.3s; position: relative; }
-        .fee-card.boys-card { border-top: 3px solid var(--blue); }
-        .fee-card.girls-card { border-top: 3px solid var(--red); }
+        .fees-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 25px; }
+        .fee-card { background: var(--card-bg); border: 1px solid #222; padding: 25px 20px; border-radius: 4px; text-align: center; transition: 0.3s; position: relative; }
+        .fee-card.boys-card { border-top: 4px solid var(--blue); }
+        .fee-card.girls-card { border-top: 4px solid var(--red); }
         .fee-card:hover { transform: translateY(-5px); }
-        .fee-card h4 { font-size: 18px; text-transform: uppercase; margin-bottom: 10px; color: var(--text-gray); display: flex; align-items: center; justify-content: center; gap: 6px; }
-        .fee-card .price { font-size: 28px; color: #fff; }
+        .fee-card h4 { font-size: 20px; text-transform: uppercase; margin-bottom: 12px; color: #ffffff; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: bold; }
+        .fee-card .price { font-size: 32px; color: #ffffff; font-weight: bold; text-shadow: 0 0 8px rgba(255,255,255,0.2); }
 
         /* Payment Box */
         .payment-box {
             background: var(--card-bg);
             border: 1px solid #222;
-            border-top: 3px solid var(--red);
-            border-bottom: 3px solid var(--blue);
+            border-top: 4px solid var(--red);
+            border-bottom: 4px solid var(--blue);
             padding: 30px;
             border-radius: 8px;
             text-align: center;
-            max-width: 450px;
+            max-width: 480px;
             margin: 20px auto 0 auto;
         }
         .payment-box h3 {
-            font-size: 24px;
+            font-size: 26px;
             text-transform: uppercase;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             color: #fff;
             display: flex;
             align-items: center;
@@ -113,18 +113,19 @@
             gap: 10px;
         }
         .payment-box p {
-            font-size: 15px;
-            color: var(--text-gray);
-            margin-bottom: 18px;
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.4;
         }
         .qr-img {
-            width: 220px;
+            width: 230px;
             height: auto;
             border-radius: 8px;
-            border: 3px solid #222;
+            border: 3px solid #333;
             padding: 5px;
             background: #fff;
-            box-shadow: 0 0 15px rgba(229, 9, 20, 0.3);
+            box-shadow: 0 0 15px rgba(229, 9, 20, 0.4);
         }
 
         /* Timings Section */
@@ -132,32 +133,32 @@
         .timing-card { background: var(--card-bg); border: 1px solid #222; padding: 30px; border-radius: 4px; position: relative; }
         .timing-card.boys-timing { border-top: 4px solid var(--blue); }
         .timing-card.girls-timing { border-top: 4px solid var(--red); }
-        .timing-card h3 { font-size: 26px; margin-bottom: 15px; text-transform: uppercase; display: flex; align-items: center; gap: 10px; }
-        .timing-card.boys-timing h3 { color: var(--blue); }
-        .timing-card.girls-timing h3 { color: var(--red); }
-        .timing-card h4 { color: #fff; font-size: 20px; margin: 18px 0 8px 0; text-transform: uppercase; border-bottom: 1px solid #222; padding-bottom: 5px; display: flex; align-items: center; gap: 8px; }
-        .timing-card p { font-size: 16px; color: var(--text-gray); line-height: 1.5; }
+        .timing-card h3 { font-size: 28px; margin-bottom: 15px; text-transform: uppercase; display: flex; align-items: center; gap: 10px; }
+        .timing-card.boys-timing h3 { color: #3385ff; }
+        .timing-card.girls-timing h3 { color: #ff333d; }
+        .timing-card h4 { color: #ffffff; font-size: 22px; margin: 20px 0 10px 0; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 6px; display: flex; align-items: center; gap: 10px; font-weight: bold; }
+        .timing-card p { font-size: 19px; color: #ffffff; line-height: 1.5; }
         
-        .class-list { list-style: none; padding-left: 0; margin-top: 10px; }
-        .class-list li { font-size: 16px; color: var(--text-gray); margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px; }
-        .class-list li i { color: var(--red); margin-top: 4px; width: 16px; text-align: center; }
+        .class-list { list-style: none; padding-left: 0; margin-top: 12px; }
+        .class-list li { font-size: 19px; color: #ffffff; margin-bottom: 14px; display: flex; align-items: flex-start; gap: 12px; line-height: 1.4; }
+        .class-list li i { color: var(--red); margin-top: 5px; width: 18px; text-align: center; font-size: 18px; }
 
-        .badge { background: var(--red); color: #fff; padding: 2px 8px; border-radius: 3px; font-size: 12px; text-transform: uppercase; margin-left: auto; }
+        .badge { background: var(--red); color: #fff; padding: 3px 10px; border-radius: 3px; font-size: 14px; text-transform: uppercase; margin-left: auto; }
 
         /* Map Location */
-        .map-container { width: 100%; height: 350px; border-radius: 4px; overflow: hidden; border: 1px solid #333; margin-top: 15px; }
+        .map-container { width: 100%; height: 380px; border-radius: 4px; overflow: hidden; border: 1px solid #333; margin-top: 15px; }
         .map-container iframe { width: 100%; height: 100%; border: 0; }
-        .map-btn { background: var(--blue); color: #fff; padding: 12px 25px; text-decoration: none; font-size: 16px; border-radius: 4px; display: inline-block; text-transform: uppercase; transition: 0.3s; }
+        .map-btn { background: var(--blue); color: #fff; padding: 14px 30px; text-decoration: none; font-size: 18px; border-radius: 4px; display: inline-block; text-transform: uppercase; transition: 0.3s; font-weight: bold; }
         .map-btn:hover { background: var(--red); }
 
         /* Banner Bar */
-        .banner-bar { background: linear-gradient(90deg, var(--red), var(--blue)); color: #fff; padding: 15px; text-align: center; font-size: 20px; text-transform: uppercase; letter-spacing: 2px; margin-top: 40px; clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%); }
+        .banner-bar { background: linear-gradient(90deg, var(--red), var(--blue)); color: #fff; padding: 15px; text-align: center; font-size: 22px; text-transform: uppercase; letter-spacing: 2px; margin-top: 40px; clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%); font-weight: bold; }
 
         /* WhatsApp Button */
-        .whatsapp-float { position: fixed; width: 55px; height: 55px; bottom: 25px; right: 25px; background-color: #25d366; color: #fff; border-radius: 50px; text-align: center; font-size: 28px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; }
+        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 25px; right: 25px; background-color: #25d366; color: #fff; border-radius: 50px; text-align: center; font-size: 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.6); z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; }
 
         /* Footer */
-        footer { background: #000; padding: 25px 50px; text-align: center; border-top: 2px solid var(--red); font-size: 14px; color: #666; }
+        footer { background: #000; padding: 25px 50px; text-align: center; border-top: 2px solid var(--red); font-size: 16px; color: #888; }
 
         @media (max-width: 768px) {
             header, .hero, section { padding: 20px; }
@@ -195,15 +196,15 @@
             <div class="hero-features">
                 <div class="feature-item">
                     <div class="badge-num">1</div>
-                    <div class="feature-text"><i class="fa-solid fa-users-rectangle" style="color: var(--blue);"></i> Separate Shifts For Boys & Girls</div>
+                    <div class="feature-text"><i class="fa-solid fa-users-rectangle" style="color: #3385ff;"></i> Separate Shifts For Boys & Girls</div>
                 </div>
                 <div class="feature-item">
                     <div class="badge-num">2</div>
-                    <div class="feature-text"><i class="fa-solid fa-user-tie" style="color: var(--red);"></i> Certified Male & Female Trainers</div>
+                    <div class="feature-text"><i class="fa-solid fa-user-tie" style="color: #ff333d;"></i> Certified Male & Female Trainers</div>
                 </div>
                 <div class="feature-item">
                     <div class="badge-num">3</div>
-                    <div class="feature-text"><i class="fa-solid fa-dumbbell" style="color: var(--blue);"></i> Strength, Fusion, CrossFit & Yoga</div>
+                    <div class="feature-text"><i class="fa-solid fa-dumbbell" style="color: #3385ff;"></i> Strength, Fusion, CrossFit & Yoga</div>
                 </div>
             </div>
 
@@ -270,11 +271,11 @@
         <div class="fee-category-title boys"><i class="fa-solid fa-mars"></i> Boys Section Fees</div>
         <div class="fees-grid">
             <div class="fee-card boys-card">
-                <h4><i class="fa-solid fa-ticket" style="color: var(--blue);"></i> Admission Fee</h4>
+                <h4><i class="fa-solid fa-ticket" style="color: #3385ff;"></i> Admission Fee</h4>
                 <div class="price">Rs. 700</div>
             </div>
             <div class="fee-card boys-card">
-                <h4><i class="fa-solid fa-calendar-check" style="color: var(--blue);"></i> Monthly Fee</h4>
+                <h4><i class="fa-solid fa-calendar-check" style="color: #3385ff;"></i> Monthly Fee</h4>
                 <div class="price">Rs. 1,800</div>
             </div>
         </div>
@@ -283,44 +284,44 @@
         <div class="fee-category-title girls"><i class="fa-solid fa-venus"></i> Girls Section Fees</div>
         <div class="fees-grid">
             <div class="fee-card girls-card">
-                <h4><i class="fa-solid fa-ticket" style="color: var(--red);"></i> Admission Fee (One Time)</h4>
+                <h4><i class="fa-solid fa-ticket" style="color: #ff333d;"></i> Admission Fee (One Time)</h4>
                 <div class="price">Rs. 1,500</div>
             </div>
             <div class="fee-card girls-card">
-                <h4><i class="fa-solid fa-dumbbell" style="color: var(--red);"></i> Gym Fee</h4>
+                <h4><i class="fa-solid fa-dumbbell" style="color: #ff333d;"></i> Gym Fee</h4>
                 <div class="price">Rs. 2,000</div>
             </div>
             <div class="fee-card girls-card">
-                <h4><i class="fa-solid fa-bolt" style="color: var(--red);"></i> Fusion Class</h4>
+                <h4><i class="fa-solid fa-bolt" style="color: #ff333d;"></i> Fusion Class</h4>
                 <div class="price">Rs. 2,500</div>
             </div>
             <div class="fee-card girls-card">
-                <h4><i class="fa-solid fa-hand-fist" style="color: var(--red);"></i> Strength Training</h4>
+                <h4><i class="fa-solid fa-hand-fist" style="color: #ff333d;"></i> Strength Training</h4>
                 <div class="price">Rs. 3,500</div>
             </div>
         </div>
 
         <!-- Facilities & Guidance Box -->
-        <div style="background: var(--card-bg); border: 1px solid #222; border-left: 4px solid var(--red); padding: 20px; border-radius: 4px; margin-bottom: 20px;">
-            <h3 style="font-size: 20px; text-transform: uppercase; margin-bottom: 15px; color: #fff; display: flex; align-items: center; gap: 10px;">
+        <div style="background: var(--card-bg); border: 1px solid #333; border-left: 5px solid var(--red); padding: 22px; border-radius: 4px; margin-bottom: 25px;">
+            <h3 style="font-size: 22px; text-transform: uppercase; margin-bottom: 15px; color: #ffffff; display: flex; align-items: center; gap: 10px; font-weight: bold;">
                 <i class="fa-solid fa-star" style="color: var(--red);"></i> Included Facilities & Guidance
             </h3>
             <ul style="list-style: none; padding-left: 5px;">
-                <li style="font-size: 16px; color: var(--text-gray); margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-                    <i class="fa-solid fa-user-ninja" style="color: var(--red);"></i> Proper Trainer Guidance
+                <li style="font-size: 19px; color: #ffffff; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; font-weight: 500;">
+                    <i class="fa-solid fa-user-ninja" style="color: var(--red); font-size: 20px;"></i> Proper Trainer Guidance
                 </li>
-                <li style="font-size: 16px; color: var(--text-gray); margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
-                    <i class="fa-solid fa-clipboard-list" style="color: var(--red);"></i> Complete Workout Explanation
+                <li style="font-size: 19px; color: #ffffff; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; font-weight: 500;">
+                    <i class="fa-solid fa-clipboard-list" style="color: var(--red); font-size: 20px;"></i> Complete Workout Explanation
                 </li>
-                <li style="font-size: 16px; color: var(--text-gray); margin-bottom: 0; display: flex; align-items: center; gap: 10px;">
-                    <i class="fa-solid fa-bullseye" style="color: var(--red);"></i> Guidance on Proper Form & Repetitions
+                <li style="font-size: 19px; color: #ffffff; margin-bottom: 0; display: flex; align-items: center; gap: 12px; font-weight: 500;">
+                    <i class="fa-solid fa-bullseye" style="color: var(--red); font-size: 20px;"></i> Guidance on Proper Form & Repetitions
                 </li>
             </ul>
         </div>
 
         <!-- Important Notice -->
-        <div style="background: rgba(229, 9, 20, 0.1); border: 1px solid var(--red); padding: 12px 20px; border-radius: 4px; text-align: center; color: #fff; font-size: 16px; margin-bottom: 35px;">
-            <i class="fa-solid fa-triangle-exclamation" style="color: var(--red); margin-right: 8px;"></i>
+        <div style="background: rgba(229, 9, 20, 0.15); border: 1px solid var(--red); padding: 15px 20px; border-radius: 4px; text-align: center; color: #ffffff; font-size: 19px; margin-bottom: 35px; font-weight: bold;">
+            <i class="fa-solid fa-triangle-exclamation" style="color: var(--red); margin-right: 10px; font-size: 22px;"></i>
             <strong>Important Notice:</strong> No discounts will be offered on any of these fees.
         </div>
 
@@ -341,18 +342,18 @@
             <div class="timing-card boys-timing">
                 <h3><i class="fa-solid fa-mars"></i> Boys Timings</h3>
                 
-                <h4><i class="fa-solid fa-sun" style="color: var(--blue);"></i> Morning Shift</h4>
+                <h4><i class="fa-solid fa-sun" style="color: #3385ff;"></i> Morning Shift</h4>
                 <p><i class="fa-regular fa-clock"></i> 6:30 AM – 10:00 AM</p>
                 
-                <h4><i class="fa-solid fa-moon" style="color: var(--blue);"></i> Evening & Night Shift</h4>
+                <h4><i class="fa-solid fa-moon" style="color: #3385ff;"></i> Evening & Night Shift</h4>
                 <p><i class="fa-regular fa-clock"></i> 4:00 PM – 1:30 AM</p>
             </div>
 
             <!-- Girls Timings -->
             <div class="timing-card girls-timing">
                 <h3><i class="fa-solid fa-venus"></i> Girls Timings</h3>
-                <p><strong><i class="fa-regular fa-clock" style="color: var(--red); margin-right: 5px;"></i> Overall Gym Timing:</strong> 9:00 AM – 9:00 PM</p>
-                <p style="margin-top: 5px; font-size: 14px; color: #aaa;"><i class="fa-solid fa-user-check" style="color: var(--red); margin-right: 5px;"></i> Counter Staff: Female staff present</p>
+                <p><strong><i class="fa-regular fa-clock" style="color: var(--red); margin-right: 6px;"></i> Overall Gym Timing:</strong> 9:00 AM – 9:00 PM</p>
+                <p style="margin-top: 6px; font-size: 16px; color: #e0e0e0;"><i class="fa-solid fa-user-check" style="color: var(--red); margin-right: 6px;"></i> Counter Staff: Female staff present</p>
                 
                 <h4><i class="fa-solid fa-calendar-days" style="color: var(--red);"></i> Class Timings <span class="badge">Duration: 1.5 Hours</span></h4>
                 <ul class="class-list">
@@ -370,11 +371,11 @@
                     </li>
                     <li>
                         <i class="fa-solid fa-cloud-sun"></i>
-                        <div><strong>Evening Slot 1:</strong> 5:15 PM – 6:15 PM <br><small style="color: #888;">(Female Trainer arrives at 5:00 PM)</small></div>
+                        <div><strong>Evening Slot 1:</strong> 5:15 PM – 6:15 PM <br><small style="color: #ffcc00;">(Female Trainer arrives at 5:00 PM)</small></div>
                     </li>
                     <li>
                         <i class="fa-solid fa-moon"></i>
-                        <div><strong>Evening Slot 2 / Main Class:</strong> 7:15 PM – 8:15 PM <br><small style="color: #888;">(Class active 7:30 PM – 8:30 PM)</small></div>
+                        <div><strong>Evening Slot 2 / Main Class:</strong> 7:15 PM – 8:15 PM <br><small style="color: #ffcc00;">(Class active 7:30 PM – 8:30 PM)</small></div>
                     </li>
                 </ul>
             </div>
@@ -385,15 +386,15 @@
     <!-- Location Section -->
     <section id="location">
         <h2 class="section-title">Location</h2>
-        <p style="color: #ccc; margin-bottom: 15px; line-height: 1.5; font-size: 16px;">
-            <i class="fa-solid fa-location-dot" style="color: var(--red);"></i> Second Floor, Meezan Bank Building, Main UP More, P-NO LS-49, Sector 11-I, North Karachi (Near Bike Market).
+        <p style="color: #ffffff; margin-bottom: 18px; line-height: 1.5; font-size: 20px; font-weight: 500;">
+            <i class="fa-solid fa-location-dot" style="color: var(--red); font-size: 24px;"></i> Second Floor, Meezan Bank Building, Main UP More, P-NO LS-49, Sector 11-I, North Karachi (Near Bike Market).
         </p>
         
         <div class="map-container">
             <iframe src="https://maps.google.com/maps?q=Faisal%20Gym%20Karachi&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
-        <div style="text-align: center; margin-top: 20px;">
+        <div style="text-align: center; margin-top: 25px;">
             <a href="https://www.google.com/maps/search/?api=1&query=Faisal+Gym+Karachi" target="_blank" class="map-btn">
                 <i class="fa-solid fa-location-dot"></i> Open Location in Google Maps
             </a>
