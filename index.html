@@ -23,6 +23,33 @@
         /* Header */
         header { display: flex; justify-content: space-between; align-items: center; padding: 12px 50px; position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(0, 0, 0, 0.95); border-bottom: 2px solid var(--red); backdrop-filter: blur(8px); }
         .logo-img { height: 55px; width: auto; object-fit: contain; }
+        
+        /* Live Header Clock Styling */
+        .header-clock {
+            background: #0d0d0d;
+            border: 1px solid #222;
+            border-top: 2px solid var(--blue);
+            border-bottom: 2px solid var(--red);
+            padding: 4px 18px;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 0 12px rgba(0, 102, 255, 0.25);
+        }
+        .clock-time {
+            font-size: 20px;
+            font-weight: bold;
+            color: #3385ff;
+            text-shadow: 0 0 8px rgba(51, 133, 255, 0.7);
+            letter-spacing: 1.5px;
+            line-height: 1.1;
+        }
+        .clock-date {
+            font-size: 13px;
+            color: var(--red);
+            text-shadow: 0 0 6px rgba(229, 9, 20, 0.6);
+            letter-spacing: 1px;
+        }
+
         nav ul { display: flex; list-style: none; gap: 20px; }
         nav a { color: var(--text-white); text-decoration: none; font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; transition: 0.3s; }
         nav a:hover { color: var(--blue); }
@@ -90,44 +117,6 @@
         .fee-card h4 { font-size: 20px; text-transform: uppercase; margin-bottom: 12px; color: #ffffff; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: bold; }
         .fee-card .price { font-size: 32px; color: #ffffff; font-weight: bold; text-shadow: 0 0 8px rgba(255,255,255,0.2); }
 
-        /* Payment Box */
-        .payment-box {
-            background: var(--card-bg);
-            border: 1px solid #222;
-            border-top: 4px solid var(--red);
-            border-bottom: 4px solid var(--blue);
-            padding: 30px;
-            border-radius: 8px;
-            text-align: center;
-            max-width: 480px;
-            margin: 20px auto 0 auto;
-        }
-        .payment-box h3 {
-            font-size: 26px;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-        .payment-box p {
-            font-size: 18px;
-            color: var(--text-light);
-            margin-bottom: 20px;
-            line-height: 1.4;
-        }
-        .qr-img {
-            width: 230px;
-            height: auto;
-            border-radius: 8px;
-            border: 3px solid #333;
-            padding: 5px;
-            background: #fff;
-            box-shadow: 0 0 15px rgba(229, 9, 20, 0.4);
-        }
-
         /* Timings Section */
         .timing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         .timing-card { background: var(--card-bg); border: 1px solid #222; padding: 30px; border-radius: 4px; position: relative; }
@@ -152,12 +141,17 @@
         .map-btn:hover { background: var(--red); }
 
         /* Locations Grid for Other Branches */
-        .locations-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 25px; margin-top: 15px; }
-        .location-card { background: var(--card-bg); border: 1px solid #222; border-top: 4px solid var(--red); padding: 20px; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between; transition: 0.3s; }
+        .locations-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-bottom: 25px; margin-top: 15px; }
+        .location-card { background: var(--card-bg); border: 1px solid #222; border-top: 4px solid var(--red); padding: 25px; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between; transition: 0.3s; }
         .location-card:hover { transform: translateY(-5px); border-top-color: var(--blue); }
-        .location-card h3 { font-size: 22px; color: #ffffff; margin-bottom: 10px; text-transform: uppercase; display: flex; align-items: center; gap: 10px; font-weight: bold; }
+        .location-card h3 { font-size: 24px; color: #ffffff; margin-bottom: 12px; text-transform: uppercase; display: flex; align-items: center; gap: 10px; font-weight: bold; }
         .location-card p { font-size: 16px; color: var(--text-light); line-height: 1.4; margin-bottom: 15px; font-family: 'Segoe UI', sans-serif; letter-spacing: 0; }
-        .branch-map-box { width: 100%; height: 220px; border-radius: 4px; overflow: hidden; border: 1px solid #333; margin-bottom: 15px; }
+        
+        .branch-info-box { background: rgba(0, 102, 255, 0.08); border-left: 3px solid var(--blue); padding: 12px 15px; border-radius: 3px; margin-bottom: 15px; }
+        .branch-info-box h5 { color: #3385ff; font-size: 18px; text-transform: uppercase; margin-bottom: 5px; display: flex; align-items: center; gap: 8px; font-weight: bold; }
+        .branch-info-box p { font-size: 17px; color: #fff; margin-bottom: 4px; font-family: 'Bebas Neue', sans-serif; letter-spacing: 1px; }
+
+        .branch-map-box { width: 100%; height: 200px; border-radius: 4px; overflow: hidden; border: 1px solid #333; margin-bottom: 15px; }
         .branch-map-box iframe { width: 100%; height: 100%; border: 0; }
         .branch-map-btn { background: var(--blue); color: #fff; text-decoration: none; padding: 12px 15px; font-size: 16px; border-radius: 4px; display: flex; align-items: center; justify-content: center; gap: 8px; text-transform: uppercase; font-weight: bold; transition: 0.3s; text-align: center; }
         .branch-map-btn:hover { background: var(--red); }
@@ -176,6 +170,9 @@
             .hero-title { font-size: 48px; }
             .hero-bg { width: 100%; opacity: 0.25; clip-path: none; }
             nav ul { display: none; }
+            .header-clock { padding: 3px 10px; }
+            .clock-time { font-size: 16px; }
+            .clock-date { font-size: 11px; }
         }
     </style>
 </head>
@@ -183,6 +180,13 @@
 
     <header>
         <a href="#"><img src="https://i.postimg.cc/kG1ksMVd/FB-IMG-1785949977671.jpg" alt="Faisal Gym Logo" class="logo-img"></a>
+        
+        <!-- Live Clock & Date Widget -->
+        <div class="header-clock">
+            <div id="clock-time" class="clock-time">00:00:00 AM</div>
+            <div id="clock-date" class="clock-date">LOADING...</div>
+        </div>
+
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -335,13 +339,6 @@
             <i class="fa-solid fa-triangle-exclamation" style="color: var(--red); margin-right: 10px; font-size: 22px;"></i>
             <strong>Important Notice:</strong> No discounts will be offered on any of these fees.
         </div>
-
-        <!-- Online Payment Section -->
-        <div class="payment-box">
-            <h3><i class="fa-solid fa-qrcode" style="color: var(--red);"></i> Online Payment</h3>
-            <p>Scan this QR code to transfer fees via mobile banking / EasyPaisa / JazzCash</p>
-            <img src="https://i.postimg.cc/j2fJR2y9/MZN-QR-20267167040.jpg" alt="Faisal Gym QR Payment Code" class="qr-img">
-        </div>
     </section>
 
     <!-- Timings Section -->
@@ -417,11 +414,20 @@
         </h3>
 
         <div class="locations-grid">
-            <!-- Ispahani Road Branch -->
-            <div class="location-card">
+            
+            <!-- Ispahani Road Branch (Updated with Timings & Fees) -->
+            <div class="location-card" style="border-top-color: var(--blue);">
                 <div>
-                    <h3><i class="fa-solid fa-location-dot" style="color: var(--red);"></i> Ispahani Road Branch</h3>
+                    <h3><i class="fa-solid fa-location-dot" style="color: var(--blue);"></i> Ispahani Road Branch</h3>
                     <p>Gulshan-e-Iqbal, Abul Hassan Isphani Road, Near Bilal Masjid, Karachi, Pakistan</p>
+                    
+                    <!-- Ispahani Timings & Fees Info Box -->
+                    <div class="branch-info-box">
+                        <h5><i class="fa-solid fa-mars"></i> Boys Section Schedule</h5>
+                        <p><i class="fa-regular fa-clock"></i> <strong>Timings:</strong> 7:00 AM – 9:00 AM & 4:00 PM – 1:00 AM</p>
+                        <p><i class="fa-solid fa-ticket"></i> <strong>Admission:</strong> Rs. 700 | <i class="fa-solid fa-calendar-check"></i> <strong>Monthly:</strong> Rs. 1,800</p>
+                    </div>
+
                     <div class="branch-map-box">
                         <iframe src="https://maps.google.com/maps?q=Faisal's%20Gym%20Abul%20Hassan%20Isphani%20Road%20Karachi&t=&z=14&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
                     </div>
@@ -454,10 +460,11 @@
                         <iframe src="https://maps.google.com/maps?q=FAISAL'S%20GYM%20Nazimabad%201%20Karachi&t=&z=14&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
-                <a href="https://www.google.com/maps/search/?api=1&query=FAISAL'S+GYM+Nazimabad+1+Karachi" target="_blank" class="branch-map-btn">
+                <a href="https://www.google.com/maps/search/?api=1&query=FAISAL'S+Gym+Nazimabad+1+Karachi" target="_blank" class="branch-map-btn">
                     <i class="fa-solid fa-map-location-dot"></i> Open Location in Google Maps
                 </a>
             </div>
+
         </div>
 
         <div class="banner-bar">
@@ -473,6 +480,35 @@
     <footer>
         <p>&copy; 2026 Faisal Gym Karachi. All Rights Reserved.</p>
     </footer>
+
+    <!-- Script for Live Clock & Date Update -->
+    <script>
+        function updateHeaderClock() {
+            const now = new Date();
+            
+            // Time Formatting
+            let hours = now.getHours();
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            
+            hours = hours % 12;
+            hours = hours ? hours : 12; 
+            const formattedHours = String(hours).padStart(2, '0');
+
+            const timeString = `${formattedHours}:${minutes}:${seconds} ${ampm}`;
+
+            // Date Formatting
+            const options = { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' };
+            const dateString = now.toLocaleDateString('en-US', options);
+
+            document.getElementById('clock-time').textContent = timeString;
+            document.getElementById('clock-date').textContent = dateString;
+        }
+
+        updateHeaderClock();
+        setInterval(updateHeaderClock, 1000);
+    </script>
 
 </body>
 </html>
