@@ -24,30 +24,30 @@
         header { display: flex; justify-content: space-between; align-items: center; padding: 12px 50px; position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(0, 0, 0, 0.95); border-bottom: 2px solid var(--red); backdrop-filter: blur(8px); }
         .logo-img { height: 55px; width: auto; object-fit: contain; }
         
-        /* Live Header Clock Styling */
+        /* Live Header Clock Styling - Enlarged */
         .header-clock {
             background: #0d0d0d;
-            border: 1px solid #222;
-            border-top: 2px solid var(--blue);
-            border-bottom: 2px solid var(--red);
-            padding: 4px 18px;
-            border-radius: 6px;
+            border: 1px solid #333;
+            border-top: 3px solid var(--blue);
+            border-bottom: 3px solid var(--red);
+            padding: 6px 22px;
+            border-radius: 8px;
             text-align: center;
-            box-shadow: 0 0 12px rgba(0, 102, 255, 0.25);
+            box-shadow: 0 0 16px rgba(0, 102, 255, 0.35);
         }
         .clock-time {
-            font-size: 20px;
+            font-size: 28px;
             font-weight: bold;
             color: #3385ff;
-            text-shadow: 0 0 8px rgba(51, 133, 255, 0.7);
-            letter-spacing: 1.5px;
+            text-shadow: 0 0 10px rgba(51, 133, 255, 0.8);
+            letter-spacing: 2px;
             line-height: 1.1;
         }
         .clock-date {
-            font-size: 13px;
+            font-size: 15px;
             color: var(--red);
-            text-shadow: 0 0 6px rgba(229, 9, 20, 0.6);
-            letter-spacing: 1px;
+            text-shadow: 0 0 8px rgba(229, 9, 20, 0.7);
+            letter-spacing: 1.5px;
         }
 
         nav ul { display: flex; list-style: none; gap: 20px; }
@@ -170,9 +170,9 @@
             .hero-title { font-size: 48px; }
             .hero-bg { width: 100%; opacity: 0.25; clip-path: none; }
             nav ul { display: none; }
-            .header-clock { padding: 3px 10px; }
-            .clock-time { font-size: 16px; }
-            .clock-date { font-size: 11px; }
+            .header-clock { padding: 4px 10px; }
+            .clock-time { font-size: 20px; }
+            .clock-date { font-size: 12px; }
         }
     </style>
 </head>
@@ -181,7 +181,7 @@
     <header>
         <a href="#"><img src="https://i.postimg.cc/kG1ksMVd/FB-IMG-1785949977671.jpg" alt="Faisal Gym Logo" class="logo-img"></a>
         
-        <!-- Live Clock & Date Widget -->
+        <!-- Live Clock & Date Widget (Enlarged Size) -->
         <div class="header-clock">
             <div id="clock-time" class="clock-time">00:00:00 AM</div>
             <div id="clock-date" class="clock-date">LOADING...</div>
@@ -415,13 +415,12 @@
 
         <div class="locations-grid">
             
-            <!-- Ispahani Road Branch (Updated with Timings & Fees) -->
+            <!-- Ispahani Road Branch -->
             <div class="location-card" style="border-top-color: var(--blue);">
                 <div>
                     <h3><i class="fa-solid fa-location-dot" style="color: var(--blue);"></i> Ispahani Road Branch</h3>
                     <p>Gulshan-e-Iqbal, Abul Hassan Isphani Road, Near Bilal Masjid, Karachi, Pakistan</p>
                     
-                    <!-- Ispahani Timings & Fees Info Box -->
                     <div class="branch-info-box">
                         <h5><i class="fa-solid fa-mars"></i> Boys Section Schedule</h5>
                         <p><i class="fa-regular fa-clock"></i> <strong>Timings:</strong> 7:00 AM – 9:00 AM & 4:00 PM – 1:00 AM</p>
