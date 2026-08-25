@@ -54,6 +54,47 @@
         nav a { color: var(--text-white); text-decoration: none; font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; transition: 0.3s; }
         nav a:hover { color: var(--blue); }
 
+        /* Announcement Section Styling */
+        .announcement-section {
+            padding: 120px 50px 0 50px;
+            position: relative;
+            z-index: 5;
+        }
+        .announcement-card {
+            background: #141414;
+            border: 2px solid var(--red);
+            border-left: 6px solid var(--blue);
+            border-radius: 8px;
+            padding: 20px 25px;
+            box-shadow: 0 0 20px rgba(229, 9, 20, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .announcement-icon {
+            font-size: 36px;
+            color: var(--red);
+            animation: pulse 1.5s infinite;
+        }
+        .announcement-content h3 {
+            font-size: 26px;
+            color: #3385ff;
+            letter-spacing: 1.5px;
+            margin-bottom: 5px;
+        }
+        .announcement-content p {
+            font-size: 20px;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            letter-spacing: 0;
+            line-height: 1.4;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+
         /* Hero Section */
         .hero { min-height: 100vh; display: flex; align-items: center; padding: 0 50px; position: relative; overflow: hidden; }
         .hero-bg {
@@ -62,7 +103,7 @@
             clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
             z-index: 1; border-left: 4px solid var(--blue);
         }
-        .hero-content { position: relative; z-index: 2; max-width: 600px; margin-top: 80px; margin-bottom: 40px; }
+        .hero-content { position: relative; z-index: 2; max-width: 600px; margin-top: 40px; margin-bottom: 40px; }
         .hero-title { font-size: 72px; font-weight: 900; line-height: 0.95; text-transform: uppercase; margin-bottom: 25px; }
         .red-text { color: var(--red); text-shadow: 0 0 10px rgba(229, 9, 20, 0.5); }
         .blue-text { color: var(--blue); text-shadow: 0 0 10px rgba(0, 102, 255, 0.5); }
@@ -167,6 +208,7 @@
 
         @media (max-width: 768px) {
             header, .hero, section { padding: 20px; }
+            .announcement-section { padding: 100px 20px 0 20px; }
             .hero-title { font-size: 48px; }
             .hero-bg { width: 100%; opacity: 0.25; clip-path: none; }
             nav ul { display: none; }
@@ -197,6 +239,19 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Announcement Box Column -->
+    <div class="announcement-section">
+        <div class="announcement-card">
+            <div class="announcement-icon">
+                <i class="fa-solid fa-bullhorn"></i>
+            </div>
+            <div class="announcement-content">
+                <h3>IMPORTANT ANNOUNCEMENT / اہم اطلاع</h3>
+                <p>12 ربیع الاول کی وجہ سے کل صبح جم بند رہے گا۔ جم شام کی شفٹ میں اپنے مقررہ وقت پر کھلے گا۔</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -422,7 +477,7 @@
                     <p>Gulshan-e-Iqbal, Abul Hassan Isphani Road, Near Bilal Masjid, Karachi, Pakistan</p>
                     
                     <div class="branch-info-box">
-                        <h5><i class="fa-solid fa-mars"></i> Boys Section Schedule</h5>
+                        ##### <i class="fa-solid fa-mars"></i> Boys Section Schedule
                         <p><i class="fa-regular fa-clock"></i> <strong>Timings:</strong> 7:00 AM – 9:00 AM & 4:00 PM – 1:00 AM</p>
                         <p><i class="fa-solid fa-ticket"></i> <strong>Admission:</strong> Rs. 700 | <i class="fa-solid fa-calendar-check"></i> <strong>Monthly:</strong> Rs. 1,800</p>
                     </div>
