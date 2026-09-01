@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VXT5NFZMT6"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -14,7 +13,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faisal Gym Karachi</title>
-    <!-- Bebas Neue Font Included -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -273,6 +271,14 @@
         .branch-map-btn { background: var(--blue); color: #fff; text-decoration: none; padding: 12px 15px; font-size: 16px; border-radius: 4px; display: flex; align-items: center; justify-content: center; gap: 8px; text-transform: uppercase; font-weight: bold; transition: 0.3s; text-align: center; }
         .branch-map-btn:hover { background: var(--red); }
 
+        /* Gulzar-e-Hijri Table & Package Custom Styling */
+        .branch-fee-table { width: 100%; border-collapse: collapse; margin-bottom: 12px; background: #080808; border: 1px solid #222; }
+        .branch-fee-table th { background: #1a1a1a; color: var(--blue); padding: 8px 10px; text-align: left; font-size: 16px; border-bottom: 1px solid #333; }
+        .branch-fee-table td { padding: 8px 10px; font-size: 16px; border-bottom: 1px solid #1a1a1a; color: #fff; }
+        .branch-fee-table tr:nth-child(even) { background: #111; }
+        .pkg-list { list-style: none; padding-left: 0; margin-top: 6px; }
+        .pkg-list li { font-size: 16px; padding: 4px 0; border-bottom: 1px solid #222; display: flex; justify-content: space-between; color: #eee; }
+
         /* Banner Bar */
         .banner-bar { background: linear-gradient(90deg, var(--red), var(--blue)); color: #fff; padding: 15px; text-align: center; font-size: 22px; text-transform: uppercase; letter-spacing: 2px; margin-top: 40px; clip-path: polygon(2% 0, 100% 0, 98% 100%, 0% 100%); font-weight: bold; }
 
@@ -299,7 +305,6 @@
     <header>
         <a href="#"><img src="https://i.postimg.cc/kG1ksMVd/FB-IMG-1785949977671.jpg" alt="Faisal Gym Logo" class="logo-img"></a>
         
-        <!-- Live Clock & Date Widget (Enlarged Size) -->
         <div class="header-clock">
             <div id="clock-time" class="clock-time">00:00:00 AM</div>
             <div id="clock-date" class="clock-date">LOADING...</div>
@@ -316,7 +321,6 @@
         </nav>
     </header>
 
-    <!-- Dynamic Announcement Section -->
     <div class="announcement-section" id="announcement-wrapper">
         <div class="announcement-card">
             <div class="announcement-icon">
@@ -329,12 +333,10 @@
         </div>
     </div>
 
-    <!-- Admin Trigger Button for Quick Update -->
     <button class="admin-notice-btn" onclick="openNoticeModal()">
         <i class="fa-solid fa-pen-to-square"></i> Set Announcement
     </button>
 
-    <!-- Admin Input Modal -->
     <div class="notice-modal" id="notice-modal">
         <div class="notice-modal-content">
             <h4>Update Announcement (24 Hours)</h4>
@@ -347,7 +349,6 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-bg"></div>
         <div class="hero-content">
@@ -374,7 +375,6 @@
 
             <a href="#fees" class="btn-explore">JOIN US NOW</a>
 
-            <!-- Video Section -->
             <div class="hero-video-box">
                 <video autoplay muted loop playsinline controls>
                     <source src="gym-video.mp4" type="video/mp4">
@@ -384,7 +384,6 @@
         </div>
     </section>
 
-    <!-- Facilities Section -->
     <section id="facilities">
         <h2 class="section-title">Why Choose Faisal Gym?</h2>
         <div class="facilities-list">
@@ -427,11 +426,9 @@
         </div>
     </section>
 
-    <!-- Fees Section -->
     <section id="fees">
         <h2 class="section-title">Fee Structure</h2>
         
-        <!-- Boys Fees -->
         <div class="fee-category-title boys"><i class="fa-solid fa-mars"></i> Boys Section Fees</div>
         <div class="fees-grid">
             <div class="fee-card boys-card">
@@ -444,7 +441,6 @@
             </div>
         </div>
 
-        <!-- Girls Section Fees -->
         <div class="fee-category-title girls"><i class="fa-solid fa-venus"></i> Girls Section Fees</div>
         <div class="fees-grid">
             <div class="fee-card girls-card">
@@ -465,7 +461,6 @@
             </div>
         </div>
 
-        <!-- Facilities & Guidance Box -->
         <div style="background: var(--card-bg); border: 1px solid #333; border-left: 5px solid var(--red); padding: 22px; border-radius: 4px; margin-bottom: 25px;">
             <h3 style="font-size: 22px; text-transform: uppercase; margin-bottom: 15px; color: #ffffff; display: flex; align-items: center; gap: 10px; font-weight: bold;">
                 <i class="fa-solid fa-star" style="color: var(--red);"></i> Included Facilities & Guidance
@@ -483,19 +478,16 @@
             </ul>
         </div>
 
-        <!-- Important Notice -->
         <div style="background: rgba(229, 9, 20, 0.15); border: 1px solid var(--red); padding: 15px 20px; border-radius: 4px; text-align: center; color: #ffffff; font-size: 19px; margin-bottom: 35px; font-weight: bold;">
             <i class="fa-solid fa-triangle-exclamation" style="color: var(--red); margin-right: 10px; font-size: 22px;"></i>
             <strong>Important Notice:</strong> No discounts will be offered on any of these fees.
         </div>
     </section>
 
-    <!-- Timings Section -->
     <section id="timings">
         <h2 class="section-title">Gym Timings & Schedule</h2>
         <div class="timing-grid">
             
-            <!-- Boys Timings -->
             <div class="timing-card boys-timing">
                 <h3><i class="fa-solid fa-mars"></i> Boys Timings</h3>
                 
@@ -506,7 +498,6 @@
                 <p><i class="fa-regular fa-clock"></i> 4:00 PM – 1:30 AM</p>
             </div>
 
-            <!-- Girls Timings -->
             <div class="timing-card girls-timing">
                 <h3><i class="fa-solid fa-venus"></i> Girls Timings</h3>
                 <p><strong><i class="fa-regular fa-clock" style="color: var(--red); margin-right: 6px;"></i> Overall Gym Timing:</strong> 9:00 AM – 9:00 PM</p>
@@ -540,7 +531,6 @@
         </div>
     </section>
 
-    <!-- Location Section -->
     <section id="location">
         <h2 class="section-title">Main Location (North Karachi)</h2>
         <p style="color: #ffffff; margin-bottom: 18px; line-height: 1.5; font-size: 20px; font-weight: 500;">
@@ -557,21 +547,19 @@
             </a>
         </div>
 
-        <!-- Other Network Branches Section -->
         <h3 style="font-size: 28px; text-transform: uppercase; margin-bottom: 20px; border-left: 4px solid var(--blue); padding-left: 12px; color: #fff;">
             Other Network Branches
         </h3>
 
         <div class="locations-grid">
             
-            <!-- Ispahani Road Branch -->
             <div class="location-card" style="border-top-color: var(--blue);">
                 <div>
                     <h3><i class="fa-solid fa-location-dot" style="color: var(--blue);"></i> Ispahani Road Branch</h3>
                     <p>Gulshan-e-Iqbal, Abul Hassan Isphani Road, Near Bilal Masjid, Karachi, Pakistan</p>
                     
                     <div class="branch-info-box">
-                        ##### <i class="fa-solid fa-mars"></i> Boys Section Schedule
+                        <h5><i class="fa-solid fa-mars"></i> Boys Section Schedule</h5>
                         <p><i class="fa-regular fa-clock"></i> <strong>Timings:</strong> 7:00 AM – 9:00 AM & 4:00 PM – 1:00 AM</p>
                         <p><i class="fa-solid fa-ticket"></i> <strong>Admission:</strong> Rs. 700 | <i class="fa-solid fa-calendar-check"></i> <strong>Monthly:</strong> Rs. 1,800</p>
                     </div>
@@ -585,11 +573,47 @@
                 </a>
             </div>
 
-            <!-- Gulzar-E-Hijri Branch -->
             <div class="location-card">
                 <div>
                     <h3><i class="fa-solid fa-location-dot" style="color: var(--red);"></i> Gulzar-E-Hijri Branch</h3>
                     <p>Memon Heights, Mezzanine Floor, Metrovill-III, Block-2, Sector 14/A, Gulzar-e-hijri, Besides Bank Islamic, Near Fariya Chowk, Karachi</p>
+                    
+                    <div class="branch-info-box" style="border-left-color: var(--red);">
+                        <h5 style="color: var(--red);"><i class="fa-regular fa-clock"></i> Gym Timings</h5>
+                        <p><strong>Boys:</strong> 6:30 AM – 10:30 AM | 5:00 PM – 1:30 AM</p>
+                        <p><strong>Girls:</strong> 10:00 AM – 5:00 PM</p>
+                    </div>
+
+                    <table class="branch-fee-table">
+                        <thead>
+                            <tr>
+                                <th>Service / Option</th>
+                                <th>Boys</th>
+                                <th>Girls</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Admission Fee</td><td>1,000/-</td><td>1,000/-</td></tr>
+                            <tr><td>Strength Charges</td><td>2,000/-</td><td>2,000/-</td></tr>
+                            <tr><td>Cardio (15 Mins)</td><td>—</td><td>3,000/-</td></tr>
+                            <tr><td>Cardio (10 Mins)</td><td>—</td><td>2,500/-</td></tr>
+                            <tr><td>Cardio Only</td><td>—</td><td>3,500/-</td></tr>
+                            <tr><td>Fusion Class</td><td>—</td><td>2,500/-</td></tr>
+                            <tr><td>Personal Training (PT)</td><td>5,000/-</td><td>5,000/-</td></tr>
+                            <tr><td>Locker Charges</td><td>500/-</td><td>500/-</td></tr>
+                            <tr><td>Per Day Pass</td><td>500/-</td><td>500/-</td></tr>
+                        </tbody>
+                    </table>
+
+                    <div class="branch-info-box" style="border-left-color: var(--red); margin-bottom: 15px;">
+                        <h5 style="color: var(--red);"><i class="fa-solid fa-tags"></i> 3 Months Special Packages (Girls)</h5>
+                        <ul class="pkg-list">
+                            <li><span>Strength + Cardio</span> <span><s style="color:#888;">16,000</s> <strong>12,000/-</strong></span></li>
+                            <li><span>Fusion Class + Cardio</span> <span><s style="color:#888;">17,500</s> <strong>13,500/-</strong></span></li>
+                            <li><span>Fusion Class + Strength</span> <span><s style="color:#888;">14,000</s> <strong>10,500/-</strong></span></li>
+                        </ul>
+                    </div>
+
                     <div class="branch-map-box">
                         <iframe src="https://maps.google.com/maps?q=Faisal's%20Gym%20Gulzar%20e%20Hijri%20Karachi&t=&z=14&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
                     </div>
@@ -599,7 +623,6 @@
                 </a>
             </div>
 
-            <!-- Nazimabad No.1 Branch -->
             <div class="location-card">
                 <div>
                     <h3><i class="fa-solid fa-location-dot" style="color: var(--red);"></i> Nazimabad No.1 Branch</h3>
@@ -620,16 +643,14 @@
         </div>
     </section>
 
-    <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/923452671131" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
     <footer>
-        <p>&copy; 2026 Faisal Gym Karachi. All Rights Reserved.</p>
+        <p>© 2026 Faisal Gym Karachi. All Rights Reserved.</p>
     </footer>
 
-    <!-- Script Section -->
     <script>
         // Live Clock & Date Update
         function updateHeaderClock() {
