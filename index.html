@@ -213,7 +213,6 @@
         /* Sections */
         section { padding: 80px 50px; position: relative; z-index: 2; }
         .section-title { font-size: 42px; text-transform: uppercase; margin-bottom: 35px; border-left: 5px solid var(--red); padding-left: 15px; color: #fff; }
-        .sub-branch-title { font-size: 22px; color: var(--blue); text-transform: uppercase; margin-top: -25px; margin-bottom: 25px; padding-left: 20px; font-weight: bold; letter-spacing: 1.5px; }
 
         /* Facilities Section */
         .facilities-list { display: flex; flex-direction: column; gap: 15px; max-width: 800px; margin: 0 auto; }
@@ -222,44 +221,8 @@
         .facility-item i { font-size: 26px; color: var(--blue); width: 30px; text-align: center; }
         .facility-item span { font-size: 22px; color: var(--text-white); text-transform: uppercase; letter-spacing: 1px; font-weight: bold; }
 
-        /* Fees Section */
-        .fee-category-title { font-size: 26px; text-transform: uppercase; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; font-weight: bold; }
-        .fee-category-title.boys { color: #3385ff; }
-        .fee-category-title.girls { color: #ff333d; }
-
-        .fees-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 25px; }
-        .fee-card { background: var(--card-bg); border: 1px solid #222; padding: 25px 20px; border-radius: 4px; text-align: center; transition: 0.3s; position: relative; }
-        .fee-card.boys-card { border-top: 4px solid var(--blue); }
-        .fee-card.girls-card { border-top: 4px solid var(--red); }
-        .fee-card:hover { transform: translateY(-5px); }
-        .fee-card h4 { font-size: 20px; text-transform: uppercase; margin-bottom: 12px; color: #ffffff; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: bold; }
-        .fee-card .price { font-size: 32px; color: #ffffff; font-weight: bold; text-shadow: 0 0 8px rgba(255,255,255,0.2); }
-
-        /* Timings Section */
-        .timing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .timing-card { background: var(--card-bg); border: 1px solid #222; padding: 30px; border-radius: 4px; position: relative; }
-        .timing-card.boys-timing { border-top: 4px solid var(--blue); }
-        .timing-card.girls-timing { border-top: 4px solid var(--red); }
-        .timing-card h3 { font-size: 28px; margin-bottom: 15px; text-transform: uppercase; display: flex; align-items: center; gap: 10px; }
-        .timing-card.boys-timing h3 { color: #3385ff; }
-        .timing-card.girls-timing h3 { color: #ff333d; }
-        .timing-card h4 { color: #ffffff; font-size: 22px; margin: 20px 0 10px 0; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 6px; display: flex; align-items: center; gap: 10px; font-weight: bold; }
-        .timing-card p { font-size: 19px; color: #ffffff; line-height: 1.5; }
-        
-        .class-list { list-style: none; padding-left: 0; margin-top: 12px; }
-        .class-list li { font-size: 19px; color: #ffffff; margin-bottom: 14px; display: flex; align-items: flex-start; gap: 12px; line-height: 1.4; }
-        .class-list li i { color: var(--red); margin-top: 5px; width: 18px; text-align: center; font-size: 18px; }
-
-        .badge { background: var(--red); color: #fff; padding: 3px 10px; border-radius: 3px; font-size: 14px; text-transform: uppercase; margin-left: auto; }
-
-        /* Map Location */
-        .map-container { width: 100%; height: 380px; border-radius: 4px; overflow: hidden; border: 1px solid #333; margin-top: 15px; }
-        .map-container iframe { width: 100%; height: 100%; border: 0; }
-        .map-btn { background: var(--blue); color: #fff; padding: 14px 30px; text-decoration: none; font-size: 18px; border-radius: 4px; display: inline-block; text-transform: uppercase; transition: 0.3s; font-weight: bold; }
-        .map-btn:hover { background: var(--red); }
-
-        /* Locations Grid for Other Branches */
-        .locations-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-bottom: 25px; margin-top: 15px; }
+        /* Locations Grid */
+        .locations-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 25px; margin-bottom: 25px; margin-top: 15px; }
         .location-card { background: var(--card-bg); border: 1px solid #222; border-top: 4px solid var(--red); padding: 25px; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between; transition: 0.3s; }
         .location-card:hover { transform: translateY(-5px); border-top-color: var(--blue); }
         .location-card h3 { font-size: 24px; color: #ffffff; margin-bottom: 12px; text-transform: uppercase; display: flex; align-items: center; gap: 10px; font-weight: bold; }
@@ -274,7 +237,7 @@
         .branch-map-btn { background: var(--blue); color: #fff; text-decoration: none; padding: 12px 15px; font-size: 16px; border-radius: 4px; display: flex; align-items: center; justify-content: center; gap: 8px; text-transform: uppercase; font-weight: bold; transition: 0.3s; text-align: center; }
         .branch-map-btn:hover { background: var(--red); }
 
-        /* Gulzar-e-Hijri Table & Package Custom Styling */
+        /* Branch Table & Package Custom Styling */
         .branch-fee-table { width: 100%; border-collapse: collapse; margin-bottom: 12px; background: #080808; border: 1px solid #222; }
         .branch-fee-table th { background: #1a1a1a; color: var(--blue); padding: 8px 10px; text-align: left; font-size: 16px; border-bottom: 1px solid #333; }
         .branch-fee-table td { padding: 8px 10px; font-size: 16px; border-bottom: 1px solid #1a1a1a; color: #fff; }
@@ -300,7 +263,6 @@
             .header-clock { padding: 4px 10px; }
             .clock-time { font-size: 20px; }
             .clock-date { font-size: 12px; }
-            .sub-branch-title { font-size: 18px; margin-top: -20px; padding-left: 15px; }
         }
     </style>
 </head>
@@ -309,7 +271,7 @@
     <header>
         <a href="#"><img src="https://i.postimg.cc/kG1ksMVd/FB-IMG-1785949977671.jpg" alt="Faisal Gym Logo" class="logo-img"></a>
         
-        <!-- Live Clock & Date Widget (Enlarged Size) -->
+        <!-- Live Clock & Date Widget -->
         <div class="header-clock">
             <div id="clock-time" class="clock-time">00:00:00 AM</div>
             <div id="clock-date" class="clock-date">LOADING...</div>
@@ -319,9 +281,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#facilities">Facilities</a></li>
-                <li><a href="#fees">Fee Structure</a></li>
-                <li><a href="#timings">Timings</a></li>
-                <li><a href="#location">Location</a></li>
+                <li><a href="#branches">Branches & Fees</a></li>
             </ul>
         </nav>
     </header>
@@ -382,7 +342,7 @@
                 </div>
             </div>
 
-            <a href="#fees" class="btn-explore">JOIN US NOW</a>
+            <a href="#branches" class="btn-explore">JOIN US NOW</a>
 
             <!-- Video Section -->
             <div class="hero-video-box">
@@ -437,163 +397,60 @@
         </div>
     </section>
 
-    <!-- Fees Section -->
-    <section id="fees">
-        <h2 class="section-title">Fee Structure</h2>
-        <div class="sub-branch-title"><i class="fa-solid fa-location-dot"></i> North Karachi Sector 11-I Branch</div>
-        
-        <!-- Boys Fees -->
-        <div class="fee-category-title boys"><i class="fa-solid fa-mars"></i> Boys Section Fees</div>
-        <div class="fees-grid">
-            <div class="fee-card boys-card">
-                <h4><i class="fa-solid fa-ticket" style="color: #3385ff;"></i> Admission Fee</h4>
-                <div class="price">Rs. 700</div>
-            </div>
-            <div class="fee-card boys-card">
-                <h4><i class="fa-solid fa-calendar-check" style="color: #3385ff;"></i> Monthly Fee</h4>
-                <div class="price">Rs. 1,800</div>
-            </div>
-        </div>
-
-        <!-- Girls Section Fees -->
-        <div class="fee-category-title girls"><i class="fa-solid fa-venus"></i> Girls Section Fees</div>
-        <div class="fees-grid">
-            <div class="fee-card girls-card">
-                <h4><i class="fa-solid fa-ticket" style="color: #ff333d;"></i> Admission Fee (One Time)</h4>
-                <div class="price">Rs. 1,500</div>
-            </div>
-            <div class="fee-card girls-card">
-                <h4><i class="fa-solid fa-dumbbell" style="color: #ff333d;"></i> Gym Fee</h4>
-                <div class="price">Rs. 2,000</div>
-            </div>
-            <div class="fee-card girls-card">
-                <h4><i class="fa-solid fa-bolt" style="color: #ff333d;"></i> Fusion Class</h4>
-                <div class="price">Rs. 2,500</div>
-            </div>
-            <div class="fee-card girls-card">
-                <h4><i class="fa-solid fa-hand-fist" style="color: #ff333d;"></i> Strength Training</h4>
-                <div class="price">Rs. 3,500</div>
-            </div>
-        </div>
-
-        <!-- Facilities & Guidance Box -->
-        <div style="background: var(--card-bg); border: 1px solid #333; border-left: 5px solid var(--red); padding: 22px; border-radius: 4px; margin-bottom: 25px;">
-            <h3 style="font-size: 22px; text-transform: uppercase; margin-bottom: 15px; color: #ffffff; display: flex; align-items: center; gap: 10px; font-weight: bold;">
-                <i class="fa-solid fa-star" style="color: var(--red);"></i> Included Facilities & Guidance
-            </h3>
-            <ul style="list-style: none; padding-left: 5px;">
-                <li style="font-size: 19px; color: #ffffff; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; font-weight: 500;">
-                    <i class="fa-solid fa-user-ninja" style="color: var(--red); font-size: 20px;"></i> Proper Trainer Guidance
-                </li>
-                <li style="font-size: 19px; color: #ffffff; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; font-weight: 500;">
-                    <i class="fa-solid fa-clipboard-list" style="color: var(--red); font-size: 20px;"></i> Complete Workout Explanation
-                </li>
-                <li style="font-size: 19px; color: #ffffff; margin-bottom: 0; display: flex; align-items: center; gap: 12px; font-weight: 500;">
-                    <i class="fa-solid fa-bullseye" style="color: var(--red); font-size: 20px;"></i> Guidance on Proper Form & Repetitions
-                </li>
-            </ul>
-        </div>
-
-        <!-- Important Notice -->
-        <div style="background: rgba(229, 9, 20, 0.15); border: 1px solid var(--red); padding: 15px 20px; border-radius: 4px; text-align: center; color: #ffffff; font-size: 19px; margin-bottom: 35px; font-weight: bold;">
-            <i class="fa-solid fa-triangle-exclamation" style="color: var(--red); margin-right: 10px; font-size: 22px;"></i>
-            <strong>Important Notice:</strong> No discounts will be offered on any of these fees.
-        </div>
-    </section>
-
-    <!-- Timings Section -->
-    <section id="timings">
-        <h2 class="section-title">Gym Timings & Schedule</h2>
-        <div class="sub-branch-title"><i class="fa-solid fa-location-dot"></i> North Karachi Sector 11-I Branch</div>
-
-        <div class="timing-grid">
-            
-            <!-- Boys Timings -->
-            <div class="timing-card boys-timing">
-                <h3><i class="fa-solid fa-mars"></i> Boys Timings</h3>
-                
-                <h4><i class="fa-solid fa-sun" style="color: #3385ff;"></i> Morning Shift</h4>
-                <p><i class="fa-regular fa-clock"></i> 6:30 AM – 10:00 AM</p>
-                
-                <h4><i class="fa-solid fa-moon" style="color: #3385ff;"></i> Evening & Night Shift</h4>
-                <p><i class="fa-regular fa-clock"></i> 4:00 PM – 1:30 AM</p>
-            </div>
-
-            <!-- Girls Timings -->
-            <div class="timing-card girls-timing">
-                <h3><i class="fa-solid fa-venus"></i> Girls Timings</h3>
-                <p><strong><i class="fa-regular fa-clock" style="color: var(--red); margin-right: 6px;"></i> Overall Gym Timing:</strong> 9:00 AM – 9:00 PM</p>
-                <p style="margin-top: 6px; font-size: 16px; color: #e0e0e0;"><i class="fa-solid fa-user-check" style="color: var(--red); margin-right: 6px;"></i> Counter Staff: Female staff present</p>
-                
-                <h4><i class="fa-solid fa-calendar-days" style="color: var(--red);"></i> Class Timings <span class="badge">Duration: 1.5 Hours</span></h4>
-                <ul class="class-list">
-                    <li>
-                        <i class="fa-solid fa-bolt"></i>
-                        <div><strong>Morning Fusion Class:</strong> 9:30 AM – 10:45 AM</div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-hand-fist"></i>
-                        <div><strong>Strength Training:</strong> 10:00 AM – 4:00 PM</div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-sun"></i>
-                        <div><strong>Afternoon Class:</strong> 3:30 PM – 4:45 PM</div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-cloud-sun"></i>
-                        <div><strong>Evening Slot 1:</strong> 5:15 PM – 6:15 PM <br><small style="color: #ffcc00;">(Female Trainer arrives at 5:00 PM)</small></div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-moon"></i>
-                        <div><strong>Evening Slot 2 / Main Class:</strong> 7:15 PM – 8:15 PM <br><small style="color: #ffcc00;">(Class active 7:30 PM – 8:30 PM)</small></div>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Location Section -->
-    <section id="location">
-        <h2 class="section-title">Main Location (North Karachi)</h2>
-        <p style="color: #ffffff; margin-bottom: 18px; line-height: 1.5; font-size: 20px; font-weight: 500;">
-            <i class="fa-solid fa-location-dot" style="color: var(--red); font-size: 24px;"></i> Second Floor, Meezan Bank Building, Main UP More, P-NO LS-49, Sector 11-I, North Karachi (Near Bike Market).
-        </p>
-        
-        <div class="map-container">
-            <iframe src="https://maps.google.com/maps?q=Faisal%20Gym%20North%20Karachi&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-
-        <div style="text-align: center; margin-top: 25px; margin-bottom: 45px;">
-            <a href="https://www.google.com/maps/search/?api=1&query=Faisal+Gym+Karachi" target="_blank" class="map-btn">
-                <i class="fa-solid fa-location-dot"></i> Open Location in Google Maps
-            </a>
-        </div>
-
-        <!-- Other Network Branches Section -->
-        <h3 style="font-size: 28px; text-transform: uppercase; margin-bottom: 20px; border-left: 4px solid var(--blue); padding-left: 12px; color: #fff;">
-            Other Network Branches
-        </h3>
+    <!-- Branches & Network Section -->
+    <section id="branches">
+        <h2 class="section-title">Our Branches & Fee Structures</h2>
 
         <div class="locations-grid">
             
-            <!-- Ispahani Road Branch -->
+            <!-- North Karachi Branch (Updated to Card/Table Format) -->
             <div class="location-card" style="border-top-color: var(--blue);">
                 <div>
-                    <h3><i class="fa-solid fa-location-dot" style="color: var(--blue);"></i> Ispahani Road Branch</h3>
-                    <p>Gulshan-e-Iqbal, Abul Hassan Isphani Road, Near Bilal Masjid, Karachi, Pakistan</p>
+                    <h3><i class="fa-solid fa-location-dot" style="color: var(--blue);"></i> North Karachi Branch</h3>
+                    <p>Second Floor, Meezan Bank Building, Main UP More, P-NO LS-49, Sector 11-I, North Karachi (Near Bike Market).</p>
                     
+                    <!-- Timings Box -->
                     <div class="branch-info-box">
-                        <h5><i class="fa-solid fa-mars"></i> Boys Section Schedule</h5>
-                        <p><i class="fa-regular fa-clock"></i> <strong>Timings:</strong> 7:00 AM – 9:00 AM & 4:00 PM – 1:00 AM</p>
-                        <p><i class="fa-solid fa-ticket"></i> <strong>Admission:</strong> Rs. 700 | <i class="fa-solid fa-calendar-check"></i> <strong>Monthly:</strong> Rs. 1,800</p>
+                        <h5><i class="fa-regular fa-clock"></i> Gym Timings</h5>
+                        <p><strong>Boys Morning:</strong> 6:30 AM – 10:00 AM</p>
+                        <p><strong>Boys Evening:</strong> 4:00 PM – 1:30 AM</p>
+                        <p><strong>Girls Shift:</strong> 9:00 AM – 9:00 PM</p>
+                    </div>
+
+                    <!-- Fee Schedule Table -->
+                    <table class="branch-fee-table">
+                        <thead>
+                            <tr>
+                                <th>Service / Option</th>
+                                <th>Boys</th>
+                                <th>Girls</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Admission Fee</td><td>700/-</td><td>1,500/-</td></tr>
+                            <tr><td>Gym / Monthly Fee</td><td>1,800/-</td><td>2,000/-</td></tr>
+                            <tr><td>Fusion Class</td><td>—</td><td>2,500/-</td></tr>
+                            <tr><td>Strength Training</td><td>—</td><td>3,500/-</td></tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Girls Class Timings Box -->
+                    <div class="branch-info-box" style="border-left-color: var(--red); margin-bottom: 15px;">
+                        <h5 style="color: var(--red);"><i class="fa-solid fa-venus"></i> Girls Class Schedule</h5>
+                        <ul class="pkg-list">
+                            <li><span>Morning Fusion</span> <span>9:30 AM – 10:45 AM</span></li>
+                            <li><span>Strength Training</span> <span>10:00 AM – 4:00 PM</span></li>
+                            <li><span>Afternoon Class</span> <span>3:30 PM – 4:45 PM</span></li>
+                            <li><span>Evening Slot 1</span> <span>5:15 PM – 6:15 PM</span></li>
+                            <li><span>Evening Slot 2</span> <span>7:15 PM – 8:15 PM</span></li>
+                        </ul>
                     </div>
 
                     <div class="branch-map-box">
-                        <iframe src="https://maps.google.com/maps?q=Faisal's%20Gym%20Abul%20Hassan%20Isphani%20Road%20Karachi&t=&z=14&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://maps.google.com/maps?q=Faisal%20Gym%20North%20Karachi&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Faisal's+Gym+Abul+Hassan+Isphani+Road+Karachi" target="_blank" class="branch-map-btn">
+                <a href="https://www.google.com/maps/search/?api=1&query=Faisal+Gym+Karachi" target="_blank" class="branch-map-btn">
                     <i class="fa-solid fa-map-location-dot"></i> Open Location in Google Maps
                 </a>
             </div>
@@ -648,6 +505,27 @@
                     </div>
                 </div>
                 <a href="https://www.google.com/maps/search/?api=1&query=Faisal's+Gym+Gulzar+e+Hijri+Karachi" target="_blank" class="branch-map-btn">
+                    <i class="fa-solid fa-map-location-dot"></i> Open Location in Google Maps
+                </a>
+            </div>
+
+            <!-- Ispahani Road Branch -->
+            <div class="location-card" style="border-top-color: var(--blue);">
+                <div>
+                    <h3><i class="fa-solid fa-location-dot" style="color: var(--blue);"></i> Ispahani Road Branch</h3>
+                    <p>Gulshan-e-Iqbal, Abul Hassan Isphani Road, Near Bilal Masjid, Karachi, Pakistan</p>
+                    
+                    <div class="branch-info-box">
+                        <h5><i class="fa-solid fa-mars"></i> Boys Section Schedule</h5>
+                        <p><i class="fa-regular fa-clock"></i> <strong>Timings:</strong> 7:00 AM – 9:00 AM & 4:00 PM – 1:00 AM</p>
+                        <p><i class="fa-solid fa-ticket"></i> <strong>Admission:</strong> Rs. 700 | <i class="fa-solid fa-calendar-check"></i> <strong>Monthly:</strong> Rs. 1,800</p>
+                    </div>
+
+                    <div class="branch-map-box">
+                        <iframe src="https://maps.google.com/maps?q=Faisal's%20Gym%20Abul%20Hassan%20Isphani%20Road%20Karachi&t=&z=14&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Faisal's+Gym+Abul+Hassan+Isphani+Road+Karachi" target="_blank" class="branch-map-btn">
                     <i class="fa-solid fa-map-location-dot"></i> Open Location in Google Maps
                 </a>
             </div>
@@ -728,7 +606,6 @@
                     return;
                 }
             }
-            // Clear if 24 hours have passed or no active notice
             wrapper.style.display = 'none';
             textElement.textContent = '';
         }
